@@ -1,4 +1,4 @@
-import {createStore, combineReducers} from 'redux';
+import {createStore} from 'redux';
 import {rootReducer, initialState } from './reducers'
 
 export const configureStore = () => {
@@ -9,6 +9,5 @@ export const configureStore = () => {
 
     return store;
 };
-
 
 export default configureStore;
