@@ -1,7 +1,7 @@
 {
   "name": "react-redux-game",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://yewhral.github.io/react-redux-game",
   "dependencies": {
     "node-sass-chokidar": "0.0.3",
@@ -18,8 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build"
   },
   "devDependencies": {
     "gh-pages": "^1.0.0"
