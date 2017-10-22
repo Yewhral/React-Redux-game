@@ -1,7 +1,6 @@
 {
   "name": "react-redux-game",
   "version": "0.1.0",
-  "private": false,
   "homepage": "https://yewhral.github.io/react",
   "dependencies": {
     "node-sass-chokidar": "0.0.3",
