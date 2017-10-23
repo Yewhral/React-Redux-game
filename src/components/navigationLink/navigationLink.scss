@@ -1,15 +1,18 @@
 .navigationLink {
   color: white;
   text-decoration: none;
-  line-height: 46px;
+  line-height: 54px;
   font-weight: 600;
   outline: 0;
   .navigationLinkDiv {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     box-sizing: border-box;
-    height: 46px;
+    height: 54px;
     background: #B5917B;
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 46px;
     border-left: 40px solid rgba(0,0,0,0.5);
     border-right: 40px solid rgba(0,0,0,0.5);
     transition: border-left 0.5s ease-out, border-right 0.5s ease-out ;

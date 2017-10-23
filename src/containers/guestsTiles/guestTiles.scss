@@ -1,0 +1,10 @@
+.guests-container {
+  background: #995236;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 84px 84px;
+  grid-template-columns: 100px 100px;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+  padding: 40px 15px 40px 15px;
+}

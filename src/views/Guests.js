@@ -1,14 +1,14 @@
 import React from 'react';
+import GuestTiles from '../containers/guestsTiles/GuestTiles';
 import Banner from '../components/banner/Banner';
-import CreditsBox from '../containers/creditsBox/CreditsBox'
 
-const Credits = () => {
+const Guests = () => {
     return (
         <div className="game-wrapper">
             <Banner/>
-            <CreditsBox/>
+            <GuestTiles/>
         </div>
     );
 };
 
-export default Credits;
+export default Guests;

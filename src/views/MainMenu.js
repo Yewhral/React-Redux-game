@@ -4,7 +4,7 @@ import Banner from '../components/banner/Banner';
 
 const MainMenu = () => {
     return (
-        <div className="gameWrapper">
+        <div className="game-wrapper">
             <Banner/>
             <Menu/>
         </div>
