@@ -1,12 +1,11 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './navigationLink.css';
 
 export default function NavigationLink(props) {
     return(
-        <div className="navigationLink">
-            <a href={props.destination}>
-                {props.text}
-            </a>
-        </div>
+            <Link to={`/${props.destination}`} className="navigationLink">
+                <div className="navigationLinkDiv">{props.text}</div>
+            </Link>
     );
 }

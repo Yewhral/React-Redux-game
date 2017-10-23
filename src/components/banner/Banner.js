@@ -7,7 +7,6 @@ export default function Banner() {
            <h1>
                Pub Master
            </h1>
-
        </header>
     );
 }

@@ -9,7 +9,10 @@ class Routes extends Component {
     <Router>
         <Switch>
         <Route exact={true} path="/" component={MainMenu} />
-        <Route exact={true} path="/asd" component={MainMenu}/>
+        <Route exact={true} path="/pubmaster" component={MainMenu}/>
+        <Route exact={true} path="/guests" component={MainMenu}/>
+        <Route exact={true} path="/scoreboard" component={MainMenu}/>
+        <Route exact={true} path="/credits" component={MainMenu}/>
         </Switch>
     </Router>
     );
