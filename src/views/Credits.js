@@ -1,14 +1,14 @@
 import React from 'react';
-import Menu from '../containers/menu/Menu';
 import Banner from '../components/banner/Banner';
+import CreditsBox from '../containers/creditsbox/CreditsBox'
 
-const MainMenu = () => {
+const Credits = () => {
     return (
         <div className="gameWrapper">
             <Banner/>
-            <Menu/>
+            <CreditsBox/>
         </div>
     );
 };
 
-export default MainMenu;
+export default Credits;
