@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import NavigationLink from '../../components/navigationLink/navigationLink';
 import './menu.css';
 
-class Menu extends Component {
+class Menu extends React.Component {
     render() {
         return (
             <div className="menu-container">
                 <NavigationLink
-                    text = 'Start the game'
+                    linkText = 'Start the game'
                     destination = 'guests'
                 />
                 <NavigationLink
-                    text = 'Scoreboard'
+                    linkText = 'Scoreboard'
                     destination = 'scoreboard'
                 />
                 <NavigationLink
-                    text = 'Credits'
+                    linkText = 'Credits'
                     destination = 'credits'
                 />
             </div>

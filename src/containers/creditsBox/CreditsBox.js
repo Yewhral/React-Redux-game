@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import NavigationLink from '../../components/navigationLink/navigationLink';
 
-class CreditsBox extends Component {
+class CreditsBox extends React.Component {
     render() {
         return (
             <div className="credits-container">
                 <NavigationLink
-                    text = 'Back to menu'
+                    linkText = 'Back to menu'
                     destination = ''
                 />
             </div>

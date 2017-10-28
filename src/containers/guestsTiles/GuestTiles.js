@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import GuestTile from '../../components/guestTile/guestTile';
 import asianSmall from '../../images/asianSmall.jpg';
 import './guestTiles.css'
 
-class GuestTiles extends Component {
+class GuestTiles extends React.Component {
     render() {
         return (
             <div className="guests-container">
