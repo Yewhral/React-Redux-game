@@ -5,8 +5,8 @@ import CreditsBox from '../containers/creditsBox/CreditsBox'
 const Credits = () => {
     return (
         <div className="game-wrapper">
-            <Banner/>
-            <CreditsBox/>
+            <Banner />
+            <CreditsBox />
         </div>
     );
 };
