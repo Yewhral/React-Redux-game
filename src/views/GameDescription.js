@@ -1,14 +1,21 @@
 import React from 'react';
 import Banner from '../components/banner/Banner';
 import HelpBox from '../containers/helpBox/HelpBox'
+import {setScrollOnTop} from '../utils/utils';
 
-const GameDescription = () => {
-    return (
-        <div className="game-wrapper">
-            <Banner />
-            <HelpBox />
-        </div>
-    );
-};
+class GameDescription extends React.Component {
+    componentDidMount() {
+        setScrollOnTop();
+    }
+
+    render() {
+        return (
+            <div className="game-wrapper">
+                <Banner />
+                <HelpBox />
+            </div>
+        );
+    };
+}
 
 export default GameDescription;

@@ -7,6 +7,7 @@ class GuestTiles extends React.Component {
     render() {
         return (
             <div className="grid-positioning">
+                <h2>Who will be your guest?</h2>
                 <div className="guests-container">
                     <GuestTile
                         guestPhoto={asianSmall}
@@ -14,15 +15,15 @@ class GuestTiles extends React.Component {
                     />
                     <GuestTile
                         guestPhoto={asianSmall}
-                        guestName="Ariel"
+                        guestName="Clark"
                     />
                     <GuestTile
                      guestPhoto={asianSmall}
-                     guestName="Ariel"
+                     guestName="Simon"
                     />
                     <GuestTile
                         guestPhoto={asianSmall}
-                        guestName="Ariel"
+                        guestName="Lucy"
                     />
                 </div>
             </div>
