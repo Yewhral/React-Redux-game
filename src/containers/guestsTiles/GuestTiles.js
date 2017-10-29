@@ -6,23 +6,25 @@ import './guestTiles.css'
 class GuestTiles extends React.Component {
     render() {
         return (
-            <div className="guests-container">
-                <GuestTile
-                    guestPhoto={asianSmall}
-                    guestName="Ariel"
-                />
-                <GuestTile
-                    guestPhoto={asianSmall}
-                    guestName="Ariel"
-                />
-                <GuestTile
-                    guestPhoto={asianSmall}
-                    guestName="Ariel"
-                />
-                <GuestTile
-                    guestPhoto={asianSmall}
-                    guestName="Ariel"
-                />
+            <div className="grid-positioning">
+                <div className="guests-container">
+                    <GuestTile
+                        guestPhoto={asianSmall}
+                        guestName="Ariel"
+                    />
+                    <GuestTile
+                        guestPhoto={asianSmall}
+                        guestName="Ariel"
+                    />
+                    <GuestTile
+                     guestPhoto={asianSmall}
+                     guestName="Ariel"
+                    />
+                    <GuestTile
+                        guestPhoto={asianSmall}
+                        guestName="Ariel"
+                    />
+                </div>
             </div>
         );
     }

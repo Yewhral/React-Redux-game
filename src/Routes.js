@@ -12,7 +12,7 @@ class Routes extends React.Component {
     <Router>
         <Switch>
             <Route exact={true} path="/" component={MainMenu} />
-            <Route exact={true} path="/" component={GameDescription} />
+            <Route exact={true} path="/help" component={GameDescription} />
             <Route exact={true} path="/pubmaster" component={Credits}/>
             <Route exact={true} path="/guests" component={Guests}/>
             <Route exact={true} path="/scoreboard" component={Credits}/>
