@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import "./textBox.css";
 
-export default function TextBox({title, text}) {
+const TextBox = ({title, text}) => {
     return (
         <div className="text-box">
             <div className="box-title">
@@ -13,3 +14,15 @@ export default function TextBox({title, text}) {
          </div>
     );
 };
+
+TextBox.propTypes = {
+    title: PropTypes.string,
+    text: PropTypes.string
+};
+
+TextBox.defaultProps = {
+    title: '',
+    text: ''
+};
+
+export default TextBox;
