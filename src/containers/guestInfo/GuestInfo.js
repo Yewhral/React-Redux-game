@@ -1,17 +1,17 @@
 import React from 'react';
 import NavigationLink from '../../components/navigationLink/navigationLink';
-import TextBox from '../../components/textBox/TextBox';
-
+import ScreenTitle from '../../components/screenTitle/screenTitle';
 import GuestTile from '../../components/guestTile/guestTile';
 import asianSmall from '../../images/asianSmall.jpg';
-
 import './guestInfo.css'
 
 class GuestInfo extends React.Component {
     render() {
         return (
             <div className="guestDetails">
-                <h2>Who will be your guest?</h2>
+                <ScreenTitle
+                    title="Who will be your guest?"
+                />
                 <GuestTile
                     guestPhoto={asianSmall}
                     guestName="Ariel"
