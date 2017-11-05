@@ -1,11 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import NavigationLink from '../../components/navigationLink/navigationLink';
 import ScreenTitle from '../../components/screenTitle/screenTitle';
 import GuestTile from '../../components/guestTile/guestTile';
 import asianSmall from '../../images/asianSmall.jpg';
+import { setGuest } from '../../redux/actions';
 import './guestInfo.css'
 
 class GuestInfo extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
     render() {
         return (
             <div className="guestDetails">
@@ -14,7 +20,7 @@ class GuestInfo extends React.Component {
                 />
                 <GuestTile
                     guestPhoto={asianSmall}
-                    guestName="Ariel"
+                    guestName={this.props.guest}
                 />
                 <NavigationLink
                     linkText = 'Choose this guest'
@@ -29,4 +35,15 @@ class GuestInfo extends React.Component {
     }
 }
 
-export default GuestInfo;
+const mapStateToProps = state => {
+    const guest = state.guest;
+    return {
+        guest
+    }
+};
+
+const mapDispatchToProps = dispatch => ({
+    setGuest: (guest) => dispatch(setGuest(guest))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(GuestInfo);

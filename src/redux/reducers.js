@@ -2,17 +2,15 @@ import * as types from './types';
 
 
 export const initialState = {
-    currentTime: new Date().toString()
+    guest: 'reduxValue'
 };
 
-// Our root reducer starts with the initial state
-// and must return a representation of the next state
 export const rootReducer = (state = initialState, action) => {
     switch(action.type) {
-        case types.FETCH_NEW_TIME:
+        case types.GUEST:
             return {
                 ...state,
-                currentTime: action.payload
+                guest: action.setGuest
             };
         default:
             return state;

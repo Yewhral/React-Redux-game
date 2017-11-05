@@ -1,6 +1,6 @@
 import * as types from './types';
 
-export const fetchNewTime = () => ({
-    type: types.FETCH_NEW_TIME,
-    payload: new Date().toString()
+export const setGuest = (_guest) => ({
+    type: types.GUEST,
+    guest: _guest
 });
