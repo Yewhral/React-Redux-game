@@ -4,7 +4,7 @@ import TextBox from '../../components/textBox/TextBox';
 
 
 class HelpBox extends React.Component {
-    helpText = 'In this minigame';
+    helpText = 'In this minigame ';
 
     render() {
         return (
@@ -14,8 +14,8 @@ class HelpBox extends React.Component {
                     text = {this.helpText}
                 />
                 <NavigationLink
-                    linkText = 'Start playing!'
-                    destination = 'guests'
+                    linkText = 'Back to menu'
+                    destination = ''
                 />
             </div>
         );

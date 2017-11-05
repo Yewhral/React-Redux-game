@@ -5,7 +5,7 @@ import './guestTile.css';
 
 const GuestTile = ({guestPhoto, guestName}) => {
     return (
-        <Link to="pubmaster">
+        <Link to="guestDetails">
             <img
                 src={guestPhoto}
                 alt={guestName}/>

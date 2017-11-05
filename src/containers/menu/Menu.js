@@ -8,11 +8,11 @@ class Menu extends React.Component {
             <div className="menu-container">
                 <NavigationLink
                     linkText = 'Start the game'
-                    destination = 'help'
+                    destination = 'guests'
                 />
                 <NavigationLink
-                    linkText = 'Scoreboard'
-                    destination = 'scoreboard'
+                    linkText = 'How to play'
+                    destination = 'help'
                 />
                 <NavigationLink
                     linkText = 'Credits'
