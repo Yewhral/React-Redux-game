@@ -10,7 +10,7 @@ export const rootReducer = (state = initialState, action) => {
         case types.GUEST:
             return {
                 ...state,
-                guest: action.setGuest
+                guest: action.guest
             };
         default:
             return state;

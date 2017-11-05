@@ -30,6 +30,14 @@ class GuestInfo extends React.Component {
                     linkText = 'Go back'
                     destination = 'guests'
                 />
+                <button
+                    onClick={() => this.props.setGuest('ssss')}>
+                    OlololOLO
+                </button>
+                <button
+                    onClick={() => this.props.setGuest('sssddds')}>
+                    OloldddolOLO
+                </button>
             </div>
         );
     }
