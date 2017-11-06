@@ -4,13 +4,14 @@ import NavigationLink from '../../components/navigationLink/navigationLink';
 import ScreenTitle from '../../components/screenTitle/screenTitle';
 import GuestTile from '../../components/guestTile/guestTile';
 import asianSmall from '../../images/asianSmall.jpg';
-import { setGuest } from '../../redux/actions';
 import './guestInfo.css'
 
 class GuestInfo extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            guest: null
+        };
     }
     render() {
         return (
@@ -30,14 +31,6 @@ class GuestInfo extends React.Component {
                     linkText = 'Go back'
                     destination = 'guests'
                 />
-                <button
-                    onClick={() => this.props.setGuest('ssss')}>
-                    OlololOLO
-                </button>
-                <button
-                    onClick={() => this.props.setGuest('sssddds')}>
-                    OloldddolOLO
-                </button>
             </div>
         );
     }
@@ -50,8 +43,4 @@ const mapStateToProps = state => {
     }
 };
 
-const mapDispatchToProps = dispatch => ({
-    setGuest: (guest) => dispatch(setGuest(guest))
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(GuestInfo);
+export default connect(mapStateToProps, null)(GuestInfo);

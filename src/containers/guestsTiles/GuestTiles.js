@@ -1,11 +1,22 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import GuestTile from '../../components/guestTile/guestTile';
 import ScreenTitle from '../../components/screenTitle/screenTitle';
 import NavigationLink from '../../components/navigationLink/navigationLink';
+import { setGuest } from '../../redux/actions';
 import asianSmall from '../../images/asianSmall.jpg';
 import './guestTiles.css'
 
 class GuestTiles extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {}
+    }
+
+    guestSelection = (guest) => {
+        this.props.setGuest(guest);
+    };
+
     render() {
         return (
             <div className="grid-positioning">
@@ -16,18 +27,22 @@ class GuestTiles extends React.Component {
                     <GuestTile
                         guestPhoto={asianSmall}
                         guestName="Ariel"
+                        onClick={() => {this.guestSelection('Ariel')}}
                     />
                     <GuestTile
                         guestPhoto={asianSmall}
                         guestName="Clark"
+                        onClick={() => {this.guestSelection('Clark')}}
                     />
                     <GuestTile
                      guestPhoto={asianSmall}
                      guestName="Simon"
+                     onClick={() => {this.guestSelection('Simon')}}
                     />
                     <GuestTile
                         guestPhoto={asianSmall}
                         guestName="Lucy"
+                        onClick={() => {this.guestSelection('Lucy')}}
                     />
                 </div>
                 <NavigationLink
@@ -39,4 +54,8 @@ class GuestTiles extends React.Component {
     }
 }
 
-export default GuestTiles;
+const mapDispatchToProps = dispatch => ({
+    setGuest: (guest) => dispatch(setGuest(guest))
+});
+
+export default connect(null, mapDispatchToProps)(GuestTiles);
