@@ -5,6 +5,11 @@ export const setGuest = (_guest) => ({
     guest: _guest
 });
 
+export const setPhoto = (_photo) => ({
+    type: types.GUEST,
+    photo: _photo
+});
+
 export const setStrength = (_strong) => ({
     type: types.STRONG,
     strong: _strong

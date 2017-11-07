@@ -10,9 +10,14 @@ class GuestInfo extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            guest: null
+            guest: null,
+            strong: null,
+            sweet: null,
+            crazy: null,
+            fancy: null
         };
     }
+
     render() {
         return (
             <div className="guestDetails">
@@ -37,9 +42,19 @@ class GuestInfo extends React.Component {
 }
 
 const mapStateToProps = state => {
-    const guest = state.guest;
+    const {
+        guest,
+        strong,
+        sweet,
+        crazy,
+        fancy
+    } = state;
     return {
-        guest
+        guest,
+        strong,
+        sweet,
+        crazy,
+        fancy
     }
 };
 

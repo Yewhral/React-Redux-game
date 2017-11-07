@@ -20,7 +20,7 @@ class GuestTiles extends React.Component {
         this.props.setCraziness(guest.crazy);
         this.props.setFanciness(guest.fancy);
     };
-    // TODO Move to a separate file
+
     guest = {
         Ariel: {
             name: "Ariel",
