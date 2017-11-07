@@ -9,6 +9,7 @@ class HelpBox extends React.Component {
     render() {
         return (
             <div className="credits-container">
+                <div className="credits">
                 <TextBox
                     title = 'How to play the game'
                     text = {this.helpText}
@@ -17,6 +18,7 @@ class HelpBox extends React.Component {
                     linkText = 'Back to menu'
                     destination = ''
                 />
+                </div>
             </div>
         );
     }

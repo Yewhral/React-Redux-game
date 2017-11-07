@@ -1,14 +1,15 @@
 .gameHeader {
   width: 100%;
   min-width: 320px;
-  height: 20vh;
+  height: 40px;
   text-align: center;
-  background: cornflowerblue;
+  background: rgb(61, 33, 22);
+  color: white;
   box-sizing: border-box;
   h1 {
-    line-height: 20vh;
+    line-height: 40px;
     margin: 0 auto;
     padding: 0 auto;
-    font-size: 20px;
+    font-size: 18px;
   }
 }

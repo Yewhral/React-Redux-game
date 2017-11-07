@@ -10,14 +10,16 @@ class CreditsBox extends React.Component {
     render() {
         return (
             <div className="credits-container">
-                <TextBox
-                    title = 'About the game'
-                    text = {this.creditsText}
-                />
-                <NavigationLink
-                    linkText = 'Back to menu'
-                    destination = ''
-                />
+                <div className="credits">
+                    <TextBox
+                        title = 'About the game'
+                        text = {this.creditsText}
+                    />
+                    <NavigationLink
+                        linkText = 'Back to menu'
+                        destination = ''
+                    />
+                </div>
             </div>
         );
     }
