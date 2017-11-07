@@ -4,7 +4,9 @@ import TextBox from '../../components/textBox/TextBox';
 
 
 class HelpBox extends React.Component {
-    helpText = 'In this minigame ';
+    helpText = 'In this minigame you play as a bartender, or even better - a mixologist. '+
+        'Invite a guest, check his preferences and mix something truly awesome for him! ' +
+        'When your guest finishes drinking he will rate what you prepared so be careful! ';
 
     render() {
         return (
