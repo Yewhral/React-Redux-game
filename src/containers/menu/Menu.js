@@ -1,5 +1,5 @@
 import React from 'react';
-import NavigationLink from '../../components/navigationLink/navigationLink';
+import NavigationLink from '../../components/navigationLink/NavigationLink';
 import './menu.css';
 
 class Menu extends React.Component {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import NavigationLink from '../../components/navigationLink/navigationLink';
-import ScreenTitle from '../../components/screenTitle/screenTitle';
-import GuestTile from '../../components/guestTile/guestTile';
+import NavigationLink from '../../components/navigationLink/NavigationLink';
+import ScreenTitle from '../../components/screenTitle/ScreenTitle';
+import GuestPic from '../../components/guestPic/guestPic';
 import asianSmall from '../../images/asianSmall.jpg';
 import './guestInfo.css'
 
@@ -19,7 +19,7 @@ class GuestInfo extends React.Component {
                 <ScreenTitle
                     title="Who will be your guest?"
                 />
-                <GuestTile
+                <GuestPic
                     guestPhoto={asianSmall}
                     guestName={this.props.guest}
                 />

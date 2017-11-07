@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import GuestTile from '../../components/guestTile/guestTile';
-import ScreenTitle from '../../components/screenTitle/screenTitle';
-import NavigationLink from '../../components/navigationLink/navigationLink';
+import GuestTile from '../../components/guestTile/GuestTile';
+import ScreenTitle from '../../components/screenTitle/ScreenTitle';
+import NavigationLink from '../../components/navigationLink/NavigationLink';
 import { setGuest } from '../../redux/actions';
 import asianSmall from '../../images/asianSmall.jpg';
 import './guestTiles.css'
