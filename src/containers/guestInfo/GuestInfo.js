@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import NavigationLink from '../../components/navigationLink/NavigationLink';
 import ScreenTitle from '../../components/screenTitle/ScreenTitle';
 import GuestPic from '../../components/guestPic/guestPic';
+import GuestStats from '../../components/guestStats/guestStats';
 import asianSmall from '../../images/asianSmall.jpg';
 import './guestInfo.css'
 
@@ -27,6 +28,12 @@ class GuestInfo extends React.Component {
                 <GuestPic
                     guestPhoto={asianSmall}
                     guestName={this.props.guest}
+                />
+                <GuestStats
+                    strong={this.props.strong}
+                    sweet={this.props.sweet}
+                    crazy={this.props.crazy}
+                    fancy={this.props.fancy}
                 />
                 <NavigationLink
                     linkText = 'Choose this guest'
