@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './guestStats.css'
 
 const GuestStats = ({strong, sweet, crazy, fancy}) => {
     const stats = ["strong", "sweet", "crazy", "fancy"];
@@ -7,13 +8,13 @@ const GuestStats = ({strong, sweet, crazy, fancy}) => {
 
     const points = (i) => {
         return [...Array(i)].map((e,i) =>
-            <span key={i}>O</span>
+            <div className="point" key={i}></div>
         );
     };
 
     const list = [...Array(stats.length)].map((e,i) =>
         <li key={i}>
-            <span>{stats[i]}:</span> {points(values[i])}
+            <div className="label">{stats[i]}</div> {points(values[i])}
         </li>
     );
 

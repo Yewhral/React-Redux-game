@@ -2,9 +2,9 @@ const guest = {
     Ariel: {
         name: "Ariel",
         strong: 1,
-        sweet: 2,
-        crazy: 3,
-        fancy: 4
+        sweet: 3,
+        crazy: 4,
+        fancy: 5
     },
     Clark: {
         name: "Clark",
