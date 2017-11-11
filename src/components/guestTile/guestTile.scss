@@ -1,17 +1,19 @@
+@import '../../styles/variables.scss';
+
 img {
   width: 120px;
   height: 100px;
   outline: 0;
-  background: rgb(90, 72,61);
+  background: $transBlack2;
   text-align: center;
-  color: white;
+  color: $white1;
   text-decoration: none;
   box-sizing: border-box;
 }
 .guestName {
   height: 20px;
-  color: white;
-  background: rgba(0, 0, 0, 0.6);
+  color: $white1;
+  background: $transBlack2;
   font-size: 14px;
   line-height: 20px;
   text-align: center;

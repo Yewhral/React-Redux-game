@@ -1,9 +1,11 @@
+@import '../../styles/variables.scss';
+
 .text-box {
-  background: rgba(75, 40, 27, 0.7);
-  border: 3px solid #a65530;
+  background: $transBrown1;
+  border: 3px solid $brown3;
   margin-bottom: 40px;
   padding: 20px;
-  color: #fff;
+  color: $white1;
   .box-title {
     font-weight: 600;
     font-size: 16px;

@@ -1,7 +1,9 @@
+@import '../../styles/variables.scss';
+
 h2 {
   letter-spacing: 1px;
   margin: 0;
-  color: white;
+  color: $white1;
   text-align: center;
   box-sizing: border-box;
   padding-top: 40px;

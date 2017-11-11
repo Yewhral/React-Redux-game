@@ -1,9 +1,11 @@
+@import '../../styles/variables.scss';
+
 .gameHeader {
   width: 100%;
   min-width: 320px;
   height: 40px;
   text-align: center;
-  background: rgb(61, 33, 22);
+  background: $brown1;
   color: white;
   box-sizing: border-box;
   h1 {
