@@ -4,7 +4,6 @@ import NavigationLink from '../../components/navigationLink/NavigationLink';
 import ScreenTitle from '../../components/screenTitle/ScreenTitle';
 import GuestPic from '../../components/guestPic/guestPic';
 import GuestStats from '../../components/guestStats/guestStats';
-import asianSmall from '../../images/asianSmall.jpg';
 import './guestInfo.css'
 
 class GuestInfo extends React.Component {
@@ -15,7 +14,8 @@ class GuestInfo extends React.Component {
             strong: null,
             sweet: null,
             crazy: null,
-            fancy: null
+            fancy: null,
+            photo: null
         };
     }
 
@@ -26,7 +26,7 @@ class GuestInfo extends React.Component {
                     title="Who will be your guest?"
                 />
                 <GuestPic
-                    guestPhoto={asianSmall}
+                    guestPhoto={this.props.photo}
                     guestName={this.props.guest}
                 />
                 <GuestStats
@@ -54,14 +54,16 @@ const mapStateToProps = state => {
         strong,
         sweet,
         crazy,
-        fancy
+        fancy,
+        photo
     } = state;
     return {
         guest,
         strong,
         sweet,
         crazy,
-        fancy
+        fancy,
+        photo
     }
 };
 

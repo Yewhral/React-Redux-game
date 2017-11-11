@@ -37,6 +37,11 @@ export const rootReducer = (state = initialState, action) => {
                 ...state,
                 fancy: action.fancy
             };
+        case types.PHOTO:
+            return {
+                ...state,
+                photo: action.photo
+            };
         default:
             return state;
     }

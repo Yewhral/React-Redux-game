@@ -6,7 +6,7 @@ export const setGuest = (_guest) => ({
 });
 
 export const setPhoto = (_photo) => ({
-    type: types.GUEST,
+    type: types.PHOTO,
     photo: _photo
 });
 

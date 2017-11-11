@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import GuestTile from '../../components/guestTile/GuestTile';
 import ScreenTitle from '../../components/screenTitle/ScreenTitle';
 import NavigationLink from '../../components/navigationLink/NavigationLink';
-import { setGuest, setStrength, setSweetness, setCraziness, setFanciness } from '../../redux/actions';
+import { setGuest, setStrength, setSweetness, setCraziness, setFanciness, setPhoto } from '../../redux/actions';
 import guest from '../../data/guests';
 import asianSmall from '../../images/asianSmall.jpg';
 import './guestTiles.css'
@@ -20,6 +20,7 @@ class GuestTiles extends React.Component {
         this.props.setSweetness(guest.sweet);
         this.props.setCraziness(guest.crazy);
         this.props.setFanciness(guest.fancy);
+        this.props.setPhoto(guest.photo);
     };
 
     render() {
@@ -63,6 +64,7 @@ const mapDispatchToProps = dispatch => ({
     setSweetness: (sweet) => dispatch(setSweetness(sweet)),
     setCraziness: (crazy) => dispatch(setCraziness(crazy)),
     setFanciness: (fancy) => dispatch(setFanciness(fancy)),
+    setPhoto: (photo) => dispatch(setPhoto(photo)),
 });
 
 export default connect(null, mapDispatchToProps)(GuestTiles);
