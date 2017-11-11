@@ -25,9 +25,7 @@ class GuestTiles extends React.Component {
     render() {
         return (
             <div className="grid-positioning">
-                <ScreenTitle
-                    title="Who will be your guest?"
-                />
+                <ScreenTitle title="Who will be your guest?" />
                 <div className="guests-container">
                     <GuestTile
                         guestPhoto={asianSmall}
