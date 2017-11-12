@@ -1,7 +1,9 @@
 import React from 'react';
 import ScreenTitle from '../../components/screenTitle/ScreenTitle';
-import Alcohol from '../../components/alcohol/Alcohol';
+import Drinks from '../../components/drinks/Drinks';
 import NavigationLink from '../../components/navigationLink/NavigationLink';
+import alcohol from '../../data/alcohol';
+import softDrinks from '../../data/softDrinks';
 import './drinkMixing.css'
 
 class DrinkMixing extends React.Component {
@@ -18,10 +20,15 @@ class DrinkMixing extends React.Component {
         return (
             <div className="bar-container">
                 <ScreenTitle title="Pick an alcohol" />
-                <Alcohol
+                <Drinks
                     onClick={this.handleAlcohol}
+                    drink={alcohol}
                 />
                 <ScreenTitle title="What to mix it with?" />
+                <Drinks
+                    onClick={this.handleAlcohol}
+                    drink={softDrinks}
+                />
                 <ScreenTitle title="Select proportions" />
                 <ScreenTitle title="Add syrup" />
                 <ScreenTitle title="Finishing touch!" />
@@ -37,6 +44,5 @@ class DrinkMixing extends React.Component {
         );
     }
 }
-
 
 export default DrinkMixing;
