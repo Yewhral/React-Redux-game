@@ -1,36 +1,29 @@
 import React from 'react';
-import alcohol from '../../data/alcohol';
-import './alcohol.css'
+import './drinks.css'
 
-
-const Alcohol = ({onClick}) => {
-
+const Drinks = ({drink, onClick}) => {
     const handleClick = (i) => {
-        onClick(alcohol[i]["name"]);
+        onClick(drink[i]["name"]);
+        onClick(drink[i]["power"]);
     };
 
-    const alcohols = (i) => {
-
-        console.log(i);
-
+    const renderDrinks = (i) => {
         return [...Array(i.length)].map((e,i) =>
             <div
                 className="bottle"
                 key={i}
                 onClick={() => {handleClick(i)}}
             >
-                {alcohol[i]["name"]}
+                {drink[i]["name"]}
             </div>
         );
     };
 
     return (
-        <div className="alcohol">
-            {alcohols(alcohol)}
+        <div className="drink">
+            {renderDrinks(drink)}
         </div>
     );
 };
 
-
-
-export default Alcohol;
+export default Drinks;

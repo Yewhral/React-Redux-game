@@ -15,7 +15,8 @@ const GuestTile = ({
         >
             <img
                 src={guestPhoto}
-                alt={guestName}/>
+                alt={guestName}
+            />
             <div className="guestName">
                 {guestName}
             </div>

@@ -27,7 +27,7 @@ const alcohol = [
     },
     {
         name: "whiskey",
-        strong: 40,
+        power: 40,
         sweet: 1,
         crazy: 2,
         fancy: 3,
