@@ -3,8 +3,7 @@ import './drinks.css'
 
 const Drinks = ({drink, onClick}) => {
     const handleClick = (i) => {
-        onClick(drink[i]["name"]);
-        onClick(drink[i]["power"]);
+        onClick(drink[i]);
     };
 
     const renderDrinks = (i) => {
@@ -14,13 +13,15 @@ const Drinks = ({drink, onClick}) => {
                 key={i}
                 onClick={() => {handleClick(i)}}
             >
-                {drink[i]["name"]}
+                <div className="label">
+                    {drink[i]["name"]}
+                </div>
             </div>
         );
     };
 
     return (
-        <div className="drink">
+        <div className="drinks">
             {renderDrinks(drink)}
         </div>
     );

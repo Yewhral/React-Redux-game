@@ -13,7 +13,7 @@ class DrinkMixing extends React.Component {
     }
 
     handleDrink = (i) => {
-        alert(i)
+        alert(i["name"]);
     };
 
     render() {
