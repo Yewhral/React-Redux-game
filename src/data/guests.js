@@ -34,4 +34,4 @@ const guest = {
         photo: asianSmall
     }
 };
-export default guest
+export default guest;

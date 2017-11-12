@@ -7,7 +7,7 @@ export const initialState = {
     sweet: 0,
     crazy: 0,
     fancy: 0,
-
+    photo: null
 };
 
 export const rootReducer = (state = initialState, action) => {
