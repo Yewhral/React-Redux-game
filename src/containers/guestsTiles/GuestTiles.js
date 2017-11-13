@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import GuestTile from '../../components/guestTile/GuestTile';
 import ScreenTitle from '../../components/screenTitle/ScreenTitle';
 import NavigationLink from '../../components/navigationLink/NavigationLink';
-import { setGuest, setStrength, setSweetness, setCraziness, setFanciness, setPhoto } from '../../redux/actions';
+import { setGuest, setStrength, setSweetness, setCraziness, setFanciness, setPhoto, setGuestStep } from '../../redux/actions';
 import guest from '../../data/guests';
 import asianSmall from '../../images/asianSmall.jpg';
 import './guestTiles.css'
@@ -21,6 +21,7 @@ class GuestTiles extends React.Component {
         this.props.setCraziness(guest.crazy);
         this.props.setFanciness(guest.fancy);
         this.props.setPhoto(guest.photo);
+        this.props.setGuestStep(1);
     };
 
     render() {
@@ -39,9 +40,9 @@ class GuestTiles extends React.Component {
                         onClick={() => {this.guestSelection(guest.Clark)}}
                     />
                     <GuestTile
-                     guestPhoto={asianSmall}
-                     guestName="Simon"
-                     onClick={() => {this.guestSelection(guest.Simon)}}
+                        guestPhoto={asianSmall}
+                        guestName="Simon"
+                        onClick={() => {this.guestSelection(guest.Simon)}}
                     />
                     <GuestTile
                         guestPhoto={asianSmall}
@@ -60,6 +61,7 @@ class GuestTiles extends React.Component {
 
 const mapDispatchToProps = dispatch => ({
     setGuest: (guest) => dispatch(setGuest(guest)),
+    setGuestStep: (step) => dispatch(setGuestStep(step)),
     setStrength: (strength) => dispatch(setStrength(strength)),
     setSweetness: (sweet) => dispatch(setSweetness(sweet)),
     setCraziness: (crazy) => dispatch(setCraziness(crazy)),

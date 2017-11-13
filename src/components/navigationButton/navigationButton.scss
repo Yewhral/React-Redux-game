@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+
+.navigationButton {
+  color: $white1;
+  text-decoration: none;
+  line-height: 54px;
+  font-weight: 600;
+  outline: 0;
+  width: 256px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  height: 54px;
+  background: $brown4;
+  text-align: center;
+  margin-bottom: 46px;
+  border-left: 40px solid $transBlack1;
+  border-right: 40px solid $transBlack1;
+  transition: border-left 0.5s ease-out, border-right 0.5s ease-out ;
+  &:hover {
+    cursor: pointer;
+    border-left: 5px solid $transBlack1;
+    border-right: 5px solid $transBlack1;
+    transition: border-left 0.5s ease-out, border-right 0.5s ease-out ;
+  }
+}

@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './guestTile.css';
 
@@ -9,9 +8,8 @@ const GuestTile = ({
     onClick
 }) => {
     return (
-        <Link
+        <div
             onClick={onClick}
-            to="guestDetails"
         >
             <img
                 src={guestPhoto}
@@ -20,7 +18,7 @@ const GuestTile = ({
             <div className="guestName">
                 {guestName}
             </div>
-        </Link>
+        </div>
     );
 };
 

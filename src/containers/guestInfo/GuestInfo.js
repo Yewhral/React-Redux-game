@@ -1,9 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import NavigationLink from '../../components/navigationLink/NavigationLink';
+import NavigationButton from '../../components/navigationButton/NavigationButton';
 import ScreenTitle from '../../components/screenTitle/ScreenTitle';
 import GuestPic from '../../components/guestPic/guestPic';
 import GuestStats from '../../components/guestStats/guestStats';
+import { setGuestStep } from '../../redux/actions';
 import './guestInfo.css'
 
 class GuestInfo extends React.Component {
@@ -39,9 +41,9 @@ class GuestInfo extends React.Component {
                     linkText = 'Choose this guest'
                     destination = 'pubmaster'
                 />
-                <NavigationLink
-                    linkText = 'Go back'
-                    destination = 'guests'
+                <NavigationButton
+                    buttonText = 'Go back'
+                    onClick={() => { this.props.setGuestStep(0); }}
                 />
             </div>
         );
@@ -51,6 +53,7 @@ class GuestInfo extends React.Component {
 const mapStateToProps = state => {
     const {
         guest,
+        guest_step,
         strong,
         sweet,
         crazy,
@@ -59,6 +62,7 @@ const mapStateToProps = state => {
     } = state;
     return {
         guest,
+        guest_step,
         strong,
         sweet,
         crazy,
@@ -67,4 +71,9 @@ const mapStateToProps = state => {
     }
 };
 
-export default connect(mapStateToProps, null)(GuestInfo);
+
+const mapDispatchToProps = dispatch => ({
+    setGuestStep: (step) => dispatch(setGuestStep(step))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(GuestInfo);
