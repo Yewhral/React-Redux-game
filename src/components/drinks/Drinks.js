@@ -3,26 +3,24 @@ import './drinks.css'
 
 const Drinks = ({drink, onClick}) => {
     const handleClick = (i) => {
-        onClick(drink[i]);
+        onClick(i);
     };
 
-    const renderDrinks = (i) => {
-        return [...Array(i.length)].map((e,i) =>
-            <div
-                className="bottle"
-                key={i}
-                onClick={() => {handleClick(i)}}
-            >
-                <div className="label">
-                    {drink[i]["name"]}
-                </div>
+    const drinks = drink.map((drink) =>
+        <div
+            className="bottle"
+            key={drink.name}
+            onClick={() => {handleClick(drink.name)}}
+        >
+            <div className="label">
+                {drink.name}
             </div>
-        );
-    };
+        </div>
+    );
 
     return (
         <div className="drinks">
-            {renderDrinks(drink)}
+            {drinks}
         </div>
     );
 };
