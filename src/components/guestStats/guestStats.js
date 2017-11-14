@@ -3,8 +3,12 @@ import PropTypes from 'prop-types';
 import './guestStats.css'
 
 const GuestStats = ({strong, sweet, crazy, fancy}) => {
-    const stats = ["strong", "sweet", "crazy", "fancy"];
-    const values = [strong, sweet, crazy, fancy];
+    const stats = [
+        { label: "strong:", value: strong },
+        { label: "sweet:", value: sweet },
+        { label: "crazy:", value: crazy },
+        { label: "fancy:", value: fancy }
+    ];
 
     const points = (i) => {
         return [...Array(i)].map((e,i) =>
@@ -12,9 +16,9 @@ const GuestStats = ({strong, sweet, crazy, fancy}) => {
         );
     };
 
-    const list = [...Array(stats.length)].map((e,i) =>
-        <li key={i}>
-            <div className="label">{stats[i]}</div> {points(values[i])}
+    const list = stats.map((stat) =>
+        <li key={stat}>
+            <div className="label">{stat.label}</div> {points(stat.value)}
         </li>
     );
 
