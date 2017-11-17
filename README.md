@@ -1,4 +1,7 @@
 #Project for fun and learning purposes
 
-This will be my first try on building something with React+Redux from scratch.
+Tech stack: React-Redux
+mobile-first approach
 
+For now - please don't mind me.
+I'm just playing with different solutions and checking things out here.

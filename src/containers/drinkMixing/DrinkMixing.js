@@ -9,26 +9,55 @@ import './drinkMixing.css'
 class DrinkMixing extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            selectedAlcohol: '',
+            selectedDrink: '',
+            canProceed: false,
+        }
     }
 
-    handleDrink = (i) => {
-        alert(i);
+    handleAlcohol = (alcohol) => {
+        this.setState({
+            selectedAlcohol: alcohol,
+            canProceed: true
+        });
+    };
+
+    handleDrink = (drink) => {
+        this.setState({
+            selectedDrink: drink,
+            canProceed: true
+        });
     };
 
     render() {
+        const {canProceed, selectedDrink, selectedAlcohol} = this.state;
         return (
             <div className="bar-container">
                 <ScreenTitle title="Pick an alcohol" />
                 <Drinks
-                    onClick={this.handleDrink}
+                    onClick={this.handleAlcohol}
                     drink={alcohol}
                 />
+                {
+                    canProceed &&
+                    <NavigationLink
+                        linkText = {selectedAlcohol}
+                        destination = ''
+                    />
+                }
                 <ScreenTitle title="What to mix it with?" />
                 <Drinks
                     onClick={this.handleDrink}
                     drink={softDrinks}
                 />
+                {
+                    canProceed &&
+                    <NavigationLink
+                        linkText = {selectedDrink}
+                        destination = ''
+                    />
+                }
                 <ScreenTitle title="Select proportions" />
                 <ScreenTitle title="Add syrup" />
                 <ScreenTitle title="Finishing touch!" />
