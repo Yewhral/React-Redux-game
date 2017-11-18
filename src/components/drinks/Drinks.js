@@ -28,23 +28,29 @@ const Drinks = ({
     );
 
     return (
-        <div>
+        <div className="drinksContainer">
             <ScreenTitle title={title} />
             <div className="drinks">
                 {drinks}
             </div>
-            {
-                canBack === true &&
-                <StepButton
-                    buttonText="back"
-                />
-            }
-            {
-                canProceed === true &&
-                <StepButton
-                    buttonText={buttonText}
-                />
-            }
+            <div className="buttons">
+                <div className="back">
+                    {
+                        canBack === true &&
+                        <StepButton
+                            buttonText="back"
+                        />
+                    }
+                </div>
+                <div className="proceed">
+                    {
+                        canProceed === true &&
+                        <StepButton
+                            buttonText={buttonText}
+                        />
+                    }
+                </div>
+            </div>
         </div>
     );
 };
