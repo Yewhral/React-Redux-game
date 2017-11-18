@@ -4,17 +4,16 @@ import './navigationButton.css';
 
 const NavigationButton = ({onClick, buttonText}) => {
     return(
-                <div
-                    className="navigationButton"
-                    onClick={onClick}
-                >
-                    {buttonText}
-                </div>
+        <div
+            className="navigationButton"
+            onClick={onClick}
+        >
+            {buttonText}
+        </div>
     );
 };
 
 NavigationButton.propTypes = {
-
     buttonText: PropTypes.string
 };
 

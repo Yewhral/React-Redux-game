@@ -1,5 +1,6 @@
 export const GUEST = 'GUEST';
 export const GUEST_STEP = 'GUEST_STEP';
+export const DRINK_STEP = 'DRINK_STEP';
 export const STRONG = 'STRONG';
 export const SWEET = 'SWEET';
 export const CRAZY = 'CRAZY';

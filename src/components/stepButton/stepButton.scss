@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+
+.stepButton {
+  color: $white1;
+  text-decoration: none;
+  line-height: 24px;
+  font-weight: 600;
+  outline: 0;
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  height: 24px;
+  background: $brown4;
+  text-align: center;
+  margin-bottom: 26px;
+  border-left: 20px solid $transBlack1;
+  border-right: 20px solid $transBlack1;
+  transition: border-left 0.5s ease-out, border-right 0.5s ease-out ;
+  &:hover {
+    cursor: pointer;
+    border-left: 5px solid $transBlack1;
+    border-right: 5px solid $transBlack1;
+    transition: border-left 0.5s ease-out, border-right 0.5s ease-out ;
+  }
+}

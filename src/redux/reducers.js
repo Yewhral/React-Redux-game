@@ -23,6 +23,11 @@ export const rootReducer = (state = initialState, action) => {
                 ...state,
                 guest_step: action.guest_step
             };
+        case types.DRINK_STEP:
+            return {
+                ...state,
+                drink_step: action.drink_step
+            };
         case types.STRONG:
             return {
                 ...state,

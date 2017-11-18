@@ -10,6 +10,11 @@ export const setGuestStep = (_guest_step) => ({
     guest_step: _guest_step
 });
 
+export const setDrinkStep = (_drink_step) => ({
+    type: types.DRINK_STEP,
+    drink_step: _drink_step
+});
+
 export const setPhoto = (_photo) => ({
     type: types.PHOTO,
     photo: _photo
