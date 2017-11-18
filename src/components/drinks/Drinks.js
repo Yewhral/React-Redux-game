@@ -1,7 +1,16 @@
 import React from 'react';
+import ScreenTitle from '../screenTitle/ScreenTitle';
+import StepButton from '../stepButton/StepButton'
 import './drinks.css'
 
-const Drinks = ({drink, onClick}) => {
+const Drinks = ({
+    drink,
+    onClick,
+    title,
+    canProceed,
+    canBack,
+    buttonText
+}) => {
     const handleClick = (i) => {
         onClick(i);
     };
@@ -19,8 +28,23 @@ const Drinks = ({drink, onClick}) => {
     );
 
     return (
-        <div className="drinks">
-            {drinks}
+        <div>
+            <ScreenTitle title={title} />
+            <div className="drinks">
+                {drinks}
+            </div>
+            {
+                canBack === true &&
+                <StepButton
+                    buttonText="back"
+                />
+            }
+            {
+                canProceed === true &&
+                <StepButton
+                    buttonText={buttonText}
+                />
+            }
         </div>
     );
 };

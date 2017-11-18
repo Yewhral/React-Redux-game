@@ -13,51 +13,44 @@ class DrinkMixing extends React.Component {
             selectedAlcohol: '',
             selectedDrink: '',
             canProceed: false,
+            canBack: false,
         }
     }
 
-    handleAlcohol = (alcohol) => {
+    handleAlcohol = () => {
+        const canProceed = this.state.canProceed;
         this.setState({
-            selectedAlcohol: alcohol,
-            canProceed: true
+            canProceed: !canProceed
         });
     };
 
-    handleDrink = (drink) => {
+    handleDrink = () => {
+        const canBack = this.state.canBack;
         this.setState({
-            selectedDrink: drink,
-            canProceed: true
+            canBack: !canBack
         });
     };
 
     render() {
-        const {canProceed, selectedDrink, selectedAlcohol} = this.state;
+        const {canProceed, canBack} = this.state;
         return (
             <div className="bar-container">
-                <ScreenTitle title="Pick an alcohol" />
                 <Drinks
                     onClick={this.handleAlcohol}
                     drink={alcohol}
+                    title="Pick an alcohol"
+                    canProceed={canProceed}
+                    canBack={canBack}
+                    buttonText="next"
                 />
-                {
-                    canProceed &&
-                    <NavigationLink
-                        linkText = {selectedAlcohol}
-                        destination = ''
-                    />
-                }
-                <ScreenTitle title="What to mix it with?" />
                 <Drinks
                     onClick={this.handleDrink}
                     drink={softDrinks}
+                    title="What to mix it with?"
+                    canProceed={canProceed}
+                    canBack={canBack}
+                    buttonText="back"
                 />
-                {
-                    canProceed &&
-                    <NavigationLink
-                        linkText = {selectedDrink}
-                        destination = ''
-                    />
-                }
                 <ScreenTitle title="Select proportions" />
                 <ScreenTitle title="Add syrup" />
                 <ScreenTitle title="Finishing touch!" />
