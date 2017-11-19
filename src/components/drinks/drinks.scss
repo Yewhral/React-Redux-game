@@ -14,6 +14,9 @@
       box-sizing: border-box;
       border: 1px solid black;
     }
+    .selected {
+      border: 3px solid yellow;
+    }
     .label {
       text-align: center;
       background: $transBlack1;

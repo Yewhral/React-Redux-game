@@ -17,22 +17,32 @@ class DrinkMixing extends React.Component {
         }
     }
 
-    handleAlcohol = () => {
+    handleAlcohol = (selectedAlcohol) => {
         const canProceed = this.state.canProceed;
         this.setState({
             canProceed: !canProceed
         });
+        if(selectedAlcohol !== this.state.selectedAlcohol) {
+            this.setState({
+                selectedAlcohol: selectedAlcohol
+            });
+        } else {
+            this.setState({
+                selectedAlcohol: ''
+            });
+        }
     };
 
-    handleDrink = () => {
+    handleDrink = (selectedDrink) => {
         const canBack = this.state.canBack;
         this.setState({
-            canBack: !canBack
+            canBack: !canBack,
+            selectedDrink: selectedDrink
         });
     };
 
     render() {
-        const {canProceed, canBack} = this.state;
+        const {canProceed, canBack, selectedAlcohol, selectedDrink} = this.state;
         return (
             <div className="bar-container">
                 <Drinks
@@ -41,6 +51,7 @@ class DrinkMixing extends React.Component {
                     title="Pick an alcohol"
                     canProceed={canProceed}
                     canBack={canBack}
+                    selected={selectedAlcohol}
                     buttonText="next"
                 />
                 <Drinks
@@ -49,6 +60,7 @@ class DrinkMixing extends React.Component {
                     title="What to mix it with?"
                     canProceed={canProceed}
                     canBack={canBack}
+                    selected={selectedDrink}
                     buttonText="back"
                 />
                 <ScreenTitle title="Select proportions" />

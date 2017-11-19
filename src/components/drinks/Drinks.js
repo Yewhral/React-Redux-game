@@ -9,7 +9,8 @@ const Drinks = ({
     title,
     canProceed,
     canBack,
-    buttonText
+    buttonText,
+    selected
 }) => {
     const handleClick = (i) => {
         onClick(i);
@@ -17,7 +18,7 @@ const Drinks = ({
 
     const drinks = drink.map((drink) =>
         <div
-            className="bottle"
+            className={"bottle" && (selected === drink.name ? 'selected' : 'bottle')}
             key={drink.name}
             onClick={() => {handleClick(drink.name)}}
         >
