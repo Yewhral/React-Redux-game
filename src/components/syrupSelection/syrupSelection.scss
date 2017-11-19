@@ -1,7 +1,33 @@
-.syrups {
+@import '../../styles/variables.scss';
+
+.syrupsContainer {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  .syrups {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    color: $white1;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .syrup {
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
   .colorBox {
     display: inline-block;
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
+    border: 1px solid $black1;
+    position: relative;
+    top: 6px;
+    margin-right: 10px;
+  }
+  .selected {
+    color: $transBlack1;
+    margin-bottom: 15px;
+    cursor: pointer;
   }
 }

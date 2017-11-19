@@ -1,27 +1,27 @@
 const syrups = [
     {
-        name: "curacao",
+        name: "Blue Curacao",
         strong: 1,
         sweet: 3,
         crazy: 4,
         fancy: 5,
-        color: "blue"
+        color: "#0058c4"
     },
     {
-        name: "grenadine",
+        name: "Grenadine",
         strong: 4,
         sweet: 3,
         crazy: 2,
         fancy: 1,
-        color: "red"
+        color: "#b41f2c"
     },
     {
-        name: "coconut",
+        name: "Coco syrup",
         strong: 1,
         sweet: 2,
         crazy: 2,
         fancy: 1,
-        color: "white"
+        color: "#ececee"
     },
     {
         name: "none",

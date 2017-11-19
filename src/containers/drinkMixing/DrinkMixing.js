@@ -39,17 +39,33 @@ class DrinkMixing extends React.Component {
     handleDrink = (selectedDrink) => {
         const canBack = this.state.canBack;
         this.setState({
-            canBack: !canBack,
-            selectedDrink: selectedDrink
+            canBack: !canBack
         });
+        if(selectedDrink !== this.state.selectedDrink) {
+            this.setState({
+                selectedDrink: selectedDrink
+            });
+        } else {
+            this.setState({
+                selectedDrink: ''
+            });
+        }
     };
 
     handleSyrup = (selectedSyrup) => {
-        const canBack = this.state.canBack;
+        const canProceed = this.state.canProceed;
         this.setState({
-            canBack: !canBack,
-            selectedSyrup: selectedSyrup
+            canProceed: !canProceed
         });
+        if(selectedSyrup !== this.state.selectedSyrup) {
+            this.setState({
+                selectedSyrup: selectedSyrup
+            });
+        } else {
+            this.setState({
+                selectedSyrup: ''
+            });
+        }
     };
 
     render() {

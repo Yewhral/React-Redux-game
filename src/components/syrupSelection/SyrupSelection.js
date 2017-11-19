@@ -29,11 +29,13 @@ const SyrupSelection = ({
     );
 
     return (
-        <div className="syrupsContainer">
-            <ScreenTitle title={title} />
-            <ul className="syrups">
-                {syrupList}
-            </ul>
+        <div>
+            <div className="syrupsContainer">
+                <ScreenTitle title={title} />
+                <ul className="syrups">
+                    {syrupList}
+                </ul>
+            </div>
             <StepNavigation
                 canBack={canBack}
                 canProceed={canProceed}

@@ -1,13 +1,20 @@
 $grey1: #a9a9a9;
 
-$white1: #ffffff;
+$white1: #fff;
+$white2: #ececee;
+
+$black1: #000;
 
 $brown1: #3d2116;
 $brown2: #995236;
 $brown3: #a65530;
 $brown4: #b5917b;
 
+$blue1: #0058c4;
+
+$red1: #b41f2c;
+
 $transBrown1: rgba(75, 40, 27, 0.7);
 
-$transBlack1: rgba(0,0,0, 0.5);
-$transBlack2: rgba(0,0,0, 0.6);
+$transBlack1: rgba($black1, 0.5);
+$transBlack2: rgba($black1, 0.6);
