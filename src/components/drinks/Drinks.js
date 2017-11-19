@@ -1,6 +1,6 @@
 import React from 'react';
 import ScreenTitle from '../screenTitle/ScreenTitle';
-import StepButton from '../stepButton/StepButton'
+import StepNavigation from '../stepNavigation/StepNavigation'
 import './drinks.css'
 
 const Drinks = ({
@@ -34,24 +34,11 @@ const Drinks = ({
             <div className="drinks">
                 {drinks}
             </div>
-            <div className="buttons">
-                <div className="back">
-                    {
-                        canBack === true &&
-                        <StepButton
-                            buttonText="back"
-                        />
-                    }
-                </div>
-                <div className="proceed">
-                    {
-                        canProceed === true &&
-                        <StepButton
-                            buttonText={buttonText}
-                        />
-                    }
-                </div>
-            </div>
+            <StepNavigation
+                canBack={canBack}
+                canProceed={canProceed}
+                buttonText={buttonText}
+            />
         </div>
     );
 };
