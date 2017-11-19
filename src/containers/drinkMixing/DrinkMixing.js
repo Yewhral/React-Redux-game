@@ -1,9 +1,11 @@
 import React from 'react';
 import ScreenTitle from '../../components/screenTitle/ScreenTitle';
 import Drinks from '../../components/drinks/Drinks';
+import SyrupSelection from '../../components/syrupSelection/SyrupSelection';
 import NavigationLink from '../../components/navigationLink/NavigationLink';
 import alcohol from '../../data/alcohol';
 import softDrinks from '../../data/softDrinks';
+import syrups from '../../data/syrups';
 import './drinkMixing.css'
 
 class DrinkMixing extends React.Component {
@@ -12,6 +14,7 @@ class DrinkMixing extends React.Component {
         this.state = {
             selectedAlcohol: '',
             selectedDrink: '',
+            selectedSyrup: '',
             canProceed: false,
             canBack: false,
         }
@@ -41,8 +44,16 @@ class DrinkMixing extends React.Component {
         });
     };
 
+    handleSyrup = (selectedSyrup) => {
+        const canBack = this.state.canBack;
+        this.setState({
+            canBack: !canBack,
+            selectedSyrup: selectedSyrup
+        });
+    };
+
     render() {
-        const {canProceed, canBack, selectedAlcohol, selectedDrink} = this.state;
+        const {canProceed, canBack, selectedAlcohol, selectedDrink, selectedSyrup} = this.state;
         return (
             <div className="bar-container">
                 <Drinks
@@ -64,7 +75,15 @@ class DrinkMixing extends React.Component {
                     buttonText="back"
                 />
                 <ScreenTitle title="Select proportions" />
-                <ScreenTitle title="Add syrup" />
+                <SyrupSelection
+                    title="Add Syrup"
+                    onClick={this.handleSyrup}
+                    syrups={syrups}
+                    canProceed={canProceed}
+                    canBack={canBack}
+                    selected={selectedSyrup}
+                    buttonText="back"
+                />
                 <ScreenTitle title="Finishing touch!" />
                 <NavigationLink
                     linkText = 'Serve your drink!'
