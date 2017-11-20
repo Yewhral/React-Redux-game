@@ -24,6 +24,14 @@ const syrups = [
         color: "#ececee"
     },
     {
+        name: "Mint syrup",
+        strong: 0,
+        sweet: 2,
+        crazy: 2,
+        fancy: 1,
+        color: "#3b9332"
+    },
+    {
         name: "none",
         strong: 0,
         sweet: 0,
