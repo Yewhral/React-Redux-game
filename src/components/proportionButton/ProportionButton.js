@@ -7,7 +7,7 @@ const ProportionButton = ({
     onClick,
 }) => {
     return(
-        <div>
+        <div className="buttonContainer">
             <label className="label">{drink}</label>
         <button
             className="proportionButton"

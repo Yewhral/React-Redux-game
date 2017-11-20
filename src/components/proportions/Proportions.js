@@ -3,39 +3,43 @@ import ScreenTitle from '../screenTitle/ScreenTitle';
 import ProportionButton from '../proportionButton/ProportionButton';
 import StepNavigation from '../stepNavigation/StepNavigation'
 import Input from '../input/Input';
+import './proportions.css';
 
 const Proportions = ({
     soft,
     alcohol,
-    alcoholAmount2,
-    softAmount2,
+    alcoholAmount,
+    softAmount,
     buttonText,
     onClick,
 }) => {
-    const alcoholAmount = 40;
-    const softAmount = 50;
     return (
-        <div className="proportions">
-            <ScreenTitle title="Select proportions" />
-            <ProportionButton
-                drink={alcohol}
-                onClick={onClick}
-            />
-            <Input
-                readOnly="true"
-                value={alcoholAmount}
-            />
-            <span className="separator">
-                /
-            </span>
-            <Input
-                readOnly="true"
-                value={softAmount}
-            />
-            <ProportionButton
-                drink={soft}
-                onClick={onClick}
-            />
+        <div>
+            <div className="proportionsContainer">
+                <ScreenTitle title="Select proportions" />
+                <div className="proportions">
+                    <ProportionButton
+                        drink={alcohol}
+                        onClick={onClick}
+                    />
+                    <Input
+                        className="inputs"
+                        readOnly="true"
+                        value={alcoholAmount}
+                    />
+                    <span className="separator">
+                        /
+                    </span>
+                    <Input
+                        readOnly="true"
+                        value={softAmount}
+                    />
+                    <ProportionButton
+                        drink={soft}
+                        onClick={onClick}
+                    />
+                </div>
+            </div>
             <StepNavigation
                 canBack={true}
                 canProceed={true}

@@ -15,7 +15,8 @@ class DrinkMixing extends React.Component {
         this.state = {
             selectedAlcohol: '',
             selectedDrink: '',
-            alcoholAmount: '',
+            alcoholAmount: 50,
+            softAmount: 50,
             selectedSyrup: '',
             canProceed: false,
             canBack: false,
@@ -75,7 +76,7 @@ class DrinkMixing extends React.Component {
     };
 
     render() {
-        const {canProceed, canBack, selectedAlcohol, selectedDrink, selectedSyrup} = this.state;
+        const {canProceed, canBack, selectedAlcohol, selectedDrink, selectedSyrup, alcoholAmount, softAmount} = this.state;
         return (
             <div className="bar-container">
                 <Drinks
@@ -99,7 +100,9 @@ class DrinkMixing extends React.Component {
                 <Proportions
                     onClick={this.handleProportions}
                     alcohol={'beer'}
+                    alcoholAmount={alcoholAmount}
                     soft={'energy drink'}
+                    softAmount={softAmount}
                     buttonText="next"
                 />
                 <SyrupSelection
