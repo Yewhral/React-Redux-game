@@ -94,10 +94,13 @@ class DrinkMixing extends React.Component {
                     canProceed={canProceed}
                     canBack={canBack}
                     selected={selectedDrink}
-                    buttonText="back"
+                    buttonText="next"
                 />
                 <Proportions
                     onClick={this.handleProportions}
+                    alcohol={'beer'}
+                    soft={'energy drink'}
+                    buttonText="next"
                 />
                 <SyrupSelection
                     title="Add Syrup"

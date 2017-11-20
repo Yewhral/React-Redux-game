@@ -1,28 +1,46 @@
 import React from 'react';
 import ScreenTitle from '../screenTitle/ScreenTitle';
+import ProportionButton from '../proportionButton/ProportionButton';
+import StepNavigation from '../stepNavigation/StepNavigation'
 import Input from '../input/Input';
 
 const Proportions = ({
-    softDrink,
+    soft,
     alcohol,
     alcoholAmount2,
+    softAmount2,
+    buttonText,
     onClick,
 }) => {
     const alcoholAmount = 40;
+    const softAmount = 50;
     return (
         <div className="proportions">
             <ScreenTitle title="Select proportions" />
-            <button
+            <ProportionButton
+                drink={alcohol}
                 onClick={onClick}
-            > More {alcohol}
-            </button>
-            <Input readOnly="true" value={alcoholAmount}/>
-            <span>/</span>
-            <input readOnly="true" value={100-alcoholAmount} />
-            <button
+            />
+            <Input
+                readOnly="true"
+                value={alcoholAmount}
+            />
+            <span className="separator">
+                /
+            </span>
+            <Input
+                readOnly="true"
+                value={softAmount}
+            />
+            <ProportionButton
+                drink={soft}
                 onClick={onClick}
-            > More {softDrink}
-            </button>
+            />
+            <StepNavigation
+                canBack={true}
+                canProceed={true}
+                buttonText={buttonText}
+            />
         </div>
     );
 };
