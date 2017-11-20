@@ -4,49 +4,49 @@ const softDrink = [
     {
         name: "cola",
         power: 0,
-        sweet: 3,
-        crazy: 4,
-        fancy: 5,
+        sweet: 4,
+        crazy: 1,
+        fancy: 1,
         image: asianSmall
     },
     {
         name: "milk",
         power: 0,
-        sweet: 2,
+        sweet: 1,
         crazy: 2,
-        fancy: 1,
+        fancy: 0,
         image: asianSmall
     },
     {
         name: "tonic",
         power: 0,
-        sweet: 3,
-        crazy: 3,
-        fancy: 3,
-        image: asianSmall
-    },
-    {
-        name: "orange juice",
-        power: 0,
-        sweet: 3,
+        sweet: 0,
         crazy: 2,
         fancy: 1,
         image: asianSmall
     },
     {
-        name: "energy drink",
-        power: 1,
+        name: "orange juice",
+        power: 0,
         sweet: 2,
-        crazy: 3,
+        crazy: 1,
+        fancy: 0,
+        image: asianSmall
+    },
+    {
+        name: "energy drink",
+        power: 3,
+        sweet: 2,
+        crazy: 5,
         fancy: 0,
         image: asianSmall
     },
     {
         name: "tomato juice",
         power: 0,
-        sweet: 1,
+        sweet: 0,
         crazy: 3,
-        fancy: 1,
+        fancy: 0,
         image: asianSmall
     }
 ];

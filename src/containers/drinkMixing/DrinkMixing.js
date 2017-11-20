@@ -3,6 +3,7 @@ import ScreenTitle from '../../components/screenTitle/ScreenTitle';
 import Drinks from '../../components/drinks/Drinks';
 import SyrupSelection from '../../components/syrupSelection/SyrupSelection';
 import NavigationLink from '../../components/navigationLink/NavigationLink';
+import Proportions from '../../components/proportions/Proportions';
 import alcohol from '../../data/alcohol';
 import softDrinks from '../../data/softDrinks';
 import syrups from '../../data/syrups';
@@ -14,6 +15,7 @@ class DrinkMixing extends React.Component {
         this.state = {
             selectedAlcohol: '',
             selectedDrink: '',
+            alcoholAmount: '',
             selectedSyrup: '',
             canProceed: false,
             canBack: false,
@@ -50,6 +52,10 @@ class DrinkMixing extends React.Component {
                 selectedDrink: ''
             });
         }
+    };
+
+    handleProportions = () => {
+        console.log('asd');
     };
 
     handleSyrup = (selectedSyrup) => {
@@ -90,7 +96,9 @@ class DrinkMixing extends React.Component {
                     selected={selectedDrink}
                     buttonText="back"
                 />
-                <ScreenTitle title="Select proportions" />
+                <Proportions
+                    onClick={this.handleProportions}
+                />
                 <SyrupSelection
                     title="Add Syrup"
                     onClick={this.handleSyrup}

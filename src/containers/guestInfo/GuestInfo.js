@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import NavigationLink from '../../components/navigationLink/NavigationLink';
 import NavigationButton from '../../components/navigationButton/NavigationButton';
 import ScreenTitle from '../../components/screenTitle/ScreenTitle';
-import GuestPic from '../../components/guestPic/guestPic';
-import GuestStats from '../../components/guestStats/guestStats';
+import GuestPic from '../../components/guestPic/GuestPic';
+import GuestStats from '../../components/guestStats/GuestStats';
 import { setGuestStep } from '../../redux/actions';
 import './guestInfo.css'
 
