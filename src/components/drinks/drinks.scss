@@ -17,6 +17,12 @@
     .selected {
       border: 3px solid yellow;
     }
+
+    img {
+      height: 78px;
+      width: 100%;
+    }
+
     .label {
       text-align: center;
       background: $transBlack1;
@@ -24,7 +30,7 @@
       font-size: 10px;
       font-weight: bold;
       position: relative;
-      top: 79px;
+      bottom: 4px;
       height: 20px;
       line-height: 20px;
     }

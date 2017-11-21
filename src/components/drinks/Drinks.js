@@ -22,6 +22,10 @@ const Drinks = ({
             key={drink.name}
             onClick={() => {handleClick(drink.name)}}
         >
+            <img
+                src={drink.image}
+                alt={drink.name}
+            />
             <div className="label">
                 {drink.name}
             </div>
