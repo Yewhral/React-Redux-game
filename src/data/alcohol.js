@@ -1,4 +1,9 @@
-import asianSmall from '../images/asianSmall.jpg';
+import beer from '../images/beer.jpg';
+import vodka from '../images/vodka.jpg';
+import tequila from '../images/tequila.jpg';
+import whiskey from '../images/whiskey.jpg';
+import gin from '../images/gin.jpg';
+import rum from '../images/rum.jpg';
 
 const alcohol = [
     {
@@ -7,7 +12,7 @@ const alcohol = [
         sweet: 0,
         crazy: 0,
         fancy: 0,
-        image: asianSmall
+        image: beer
     },
     {
         name: "vodka",
@@ -15,7 +20,7 @@ const alcohol = [
         sweet: 0,
         crazy: 5,
         fancy: 0,
-        image: asianSmall
+        image: vodka
     },
     {
         name: "tequila",
@@ -23,7 +28,7 @@ const alcohol = [
         sweet: 2,
         crazy: 3,
         fancy: 2,
-        image: asianSmall
+        image: tequila
     },
     {
         name: "whiskey",
@@ -31,7 +36,7 @@ const alcohol = [
         sweet: 1,
         crazy: 2,
         fancy: 3,
-        image: asianSmall
+        image: whiskey
     },
     {
         name: "gin",
@@ -39,7 +44,7 @@ const alcohol = [
         sweet: 3,
         crazy: 3,
         fancy: 2,
-        image: asianSmall
+        image: gin
     },
     {
         name: "rum",
@@ -47,7 +52,7 @@ const alcohol = [
         sweet: 5,
         crazy: 2,
         fancy: 3,
-        image: asianSmall
+        image: rum
     }
 ];
 export default alcohol;
