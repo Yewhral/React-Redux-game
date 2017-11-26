@@ -1,4 +1,9 @@
-import asianSmall from '../images/asianSmall.jpg';
+import cola from '../images/cola.jpg';
+import milk from '../images/milk.jpg';
+import tonic from '../images/tonic.jpg';
+import orange from '../images/orange.jpg';
+import energy from '../images/energy.jpg';
+import tomato from '../images/tomato.jpg';
 
 const softDrink = [
     {
@@ -7,7 +12,7 @@ const softDrink = [
         sweet: 4,
         crazy: 1,
         fancy: 1,
-        image: asianSmall
+        image: cola
     },
     {
         name: "milk",
@@ -15,7 +20,7 @@ const softDrink = [
         sweet: 1,
         crazy: 2,
         fancy: 0,
-        image: asianSmall
+        image: milk
     },
     {
         name: "tonic",
@@ -23,7 +28,7 @@ const softDrink = [
         sweet: 0,
         crazy: 2,
         fancy: 1,
-        image: asianSmall
+        image: tonic
     },
     {
         name: "orange juice",
@@ -31,7 +36,7 @@ const softDrink = [
         sweet: 2,
         crazy: 1,
         fancy: 0,
-        image: asianSmall
+        image: orange
     },
     {
         name: "energy drink",
@@ -39,7 +44,7 @@ const softDrink = [
         sweet: 2,
         crazy: 5,
         fancy: 0,
-        image: asianSmall
+        image: energy
     },
     {
         name: "tomato juice",
@@ -47,7 +52,7 @@ const softDrink = [
         sweet: 0,
         crazy: 3,
         fancy: 0,
-        image: asianSmall
+        image: tomato
     }
 ];
 export default softDrink;
