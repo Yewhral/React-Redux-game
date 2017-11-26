@@ -24,23 +24,42 @@ class DrinkMixing extends React.Component {
         }
     }
 
+    handleProportions = (type) => {
+        const {alcoholAmount, softAmount} = this.state;
+        const amount = 10;
+        if (type === 'alcohol' && alcoholAmount < 90) {
+          const increasedAmount = alcoholAmount + amount;
+          const decreasedAmount = softAmount - amount;
+          this.setState({
+              alcoholAmount: increasedAmount,
+              softAmount: decreasedAmount,
+          })
+        } else if (type === 'soft' && softAmount < 90 ) {
+            const increasedAmount = softAmount + amount;
+            const decreasedAmount = alcoholAmount - amount;
+            this.setState({
+                alcoholAmount: decreasedAmount,
+                softAmount: increasedAmount,
+            })
+        }
+    };
+
     handleStep = (value) => {
         const {currentStep} = this.state;
         const newStep = currentStep + value;
         this.setState({
-            currentStep: newStep
+            currentStep: newStep,
         });
-        console.log(currentStep);
     };
 
-    handleAlcohol = (selectedAlcohol) => {
-        const { canProceed } = this.state;
+    handleAlcohol = (alcohol) => {
+        const { canProceed, selectedAlcohol } = this.state;
         this.setState({
             canProceed: !canProceed
         });
-        if(selectedAlcohol !== this.state.selectedAlcohol) {
+        if(alcohol !== selectedAlcohol) {
             this.setState({
-                selectedAlcohol: selectedAlcohol
+                selectedAlcohol: alcohol
             });
         } else {
             this.setState({
@@ -63,10 +82,6 @@ class DrinkMixing extends React.Component {
                 selectedDrink: ''
             });
         }
-    };
-
-    handleProportions = () => {
-        console.log('asd');
     };
 
     handleSyrup = (selectedSyrup) => {
@@ -112,7 +127,6 @@ class DrinkMixing extends React.Component {
                     backOnClick={() => this.handleStep(-1)}
                 />
                 <Proportions
-                    onClick={this.handleProportions}
                     alcohol={'beer'}
                     alcoholAmount={alcoholAmount}
                     soft={'energy drink'}
@@ -120,6 +134,8 @@ class DrinkMixing extends React.Component {
                     buttonText="next"
                     nextOnClick={() => this.handleStep(1)}
                     backOnClick={() => this.handleStep(-1)}
+                    alcoholIncrease={() => this.handleProportions("alcohol")}
+                    softIncrease={() => this.handleProportions("soft")}
                 />
                 <SyrupSelection
                     title="Add Syrup"

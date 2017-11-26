@@ -10,10 +10,11 @@ const Proportions = ({
     alcohol,
     alcoholAmount,
     softAmount,
+    alcoholIncrease,
+    softIncrease,
     nextOnClick,
     backOnClick,
     buttonText,
-    onClick,
 }) => {
     return (
         <div>
@@ -22,7 +23,7 @@ const Proportions = ({
                 <div className="proportions">
                     <ProportionButton
                         drink={alcohol}
-                        onClick={onClick}
+                        onClick={alcoholIncrease}
                     />
                     <Input
                         className="inputs"
@@ -38,7 +39,7 @@ const Proportions = ({
                     />
                     <ProportionButton
                         drink={soft}
-                        onClick={onClick}
+                        onClick={softIncrease}
                     />
                 </div>
             </div>
