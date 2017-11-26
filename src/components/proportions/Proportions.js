@@ -10,6 +10,8 @@ const Proportions = ({
     alcohol,
     alcoholAmount,
     softAmount,
+    nextOnClick,
+    backOnClick,
     buttonText,
     onClick,
 }) => {
@@ -43,6 +45,8 @@ const Proportions = ({
             <StepNavigation
                 canBack={true}
                 canProceed={true}
+                nextOnClick={nextOnClick}
+                backOnClick={backOnClick}
                 buttonText={buttonText}
             />
         </div>

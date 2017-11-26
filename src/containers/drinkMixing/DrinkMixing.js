@@ -20,11 +20,21 @@ class DrinkMixing extends React.Component {
             selectedSyrup: '',
             canProceed: false,
             canBack: false,
+            currentStep: 0,
         }
     }
 
+    handleStep = (value) => {
+        const {currentStep} = this.state;
+        const newStep = currentStep + value;
+        this.setState({
+            currentStep: newStep
+        });
+        console.log(currentStep);
+    };
+
     handleAlcohol = (selectedAlcohol) => {
-        const canProceed = this.state.canProceed;
+        const { canProceed } = this.state;
         this.setState({
             canProceed: !canProceed
         });
@@ -39,14 +49,14 @@ class DrinkMixing extends React.Component {
         }
     };
 
-    handleDrink = (selectedDrink) => {
-        const canBack = this.state.canBack;
+    handleDrink = (drink) => {
+        const { canBack, selectedDrink } = this.state;
         this.setState({
             canBack: !canBack
         });
-        if(selectedDrink !== this.state.selectedDrink) {
+        if(drink !== selectedDrink) {
             this.setState({
-                selectedDrink: selectedDrink
+                selectedDrink: drink
             });
         } else {
             this.setState({
@@ -60,7 +70,7 @@ class DrinkMixing extends React.Component {
     };
 
     handleSyrup = (selectedSyrup) => {
-        const canProceed = this.state.canProceed;
+        const { canProceed } = this.state;
         this.setState({
             canProceed: !canProceed
         });
@@ -87,6 +97,8 @@ class DrinkMixing extends React.Component {
                     canBack={canBack}
                     selected={selectedAlcohol}
                     buttonText="next"
+                    nextOnClick={() => this.handleStep(1)}
+                    backOnClick={() => this.handleStep(-1)}
                 />
                 <Drinks
                     onClick={this.handleDrink}
@@ -96,6 +108,8 @@ class DrinkMixing extends React.Component {
                     canBack={canBack}
                     selected={selectedDrink}
                     buttonText="next"
+                    nextOnClick={() => this.handleStep(1)}
+                    backOnClick={() => this.handleStep(-1)}
                 />
                 <Proportions
                     onClick={this.handleProportions}
@@ -104,6 +118,8 @@ class DrinkMixing extends React.Component {
                     soft={'energy drink'}
                     softAmount={softAmount}
                     buttonText="next"
+                    nextOnClick={() => this.handleStep(1)}
+                    backOnClick={() => this.handleStep(-1)}
                 />
                 <SyrupSelection
                     title="Add Syrup"
@@ -113,6 +129,8 @@ class DrinkMixing extends React.Component {
                     canBack={canBack}
                     selected={selectedSyrup}
                     buttonText="back"
+                    nextOnClick={() => this.handleStep(1)}
+                    backOnClick={() => this.handleStep(-1)}
                 />
                 <ScreenTitle title="Finishing touch!" />
                 <NavigationLink

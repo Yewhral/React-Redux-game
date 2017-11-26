@@ -6,6 +6,8 @@ import './syrupSelection.css'
 const SyrupSelection = ({
     syrups,
     onClick,
+    nextOnClick,
+    backOnClick,
     title,
     canProceed,
     canBack,
@@ -40,6 +42,8 @@ const SyrupSelection = ({
                 canBack={canBack}
                 canProceed={canProceed}
                 buttonText={buttonText}
+                nextOnClick={nextOnClick}
+                backOnClick={backOnClick}
             />
         </div>
     );

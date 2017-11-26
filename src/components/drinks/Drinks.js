@@ -6,6 +6,8 @@ import './drinks.css'
 const Drinks = ({
     drink,
     onClick,
+    nextOnClick,
+    backOnClick,
     title,
     canProceed,
     canBack,
@@ -42,6 +44,8 @@ const Drinks = ({
                 canBack={canBack}
                 canProceed={canProceed}
                 buttonText={buttonText}
+                nextOnClick={nextOnClick}
+                backOnClick={backOnClick}
             />
         </div>
     );

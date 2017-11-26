@@ -3,6 +3,8 @@ import StepButton from '../stepButton/StepButton'
 import './stepNavigation.css'
 
 const StepNavigation = ({
+    nextOnClick,
+    backOnClick,
     canProceed,
     canBack,
     buttonText,
@@ -13,6 +15,7 @@ const StepNavigation = ({
                 {
                     canBack === true &&
                     <StepButton
+                        onClick={backOnClick}
                         buttonText="back"
                     />
                 }
@@ -21,6 +24,7 @@ const StepNavigation = ({
                 {
                     canProceed === true &&
                     <StepButton
+                        onClick={nextOnClick}
                         buttonText={buttonText}
                     />
                 }
