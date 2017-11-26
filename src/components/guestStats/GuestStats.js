@@ -17,7 +17,7 @@ const GuestStats = ({strong, sweet, crazy, fancy}) => {
     };
 
     const list = stats.map((stat) =>
-        <li key={stat}>
+        <li key={stat.label}>
             <div className="label">{stat.label}</div> {points(stat.value)}
         </li>
     );
