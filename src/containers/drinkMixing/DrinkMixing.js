@@ -53,33 +53,31 @@ class DrinkMixing extends React.Component {
     };
 
     handleAlcohol = (alcohol) => {
-        const { canProceed, selectedAlcohol } = this.state;
-        this.setState({
-            canProceed: !canProceed
-        });
+        const { selectedAlcohol } = this.state;
         if(alcohol !== selectedAlcohol) {
             this.setState({
-                selectedAlcohol: alcohol
+                selectedAlcohol: alcohol,
+                canProceed: true,
             });
         } else {
             this.setState({
-                selectedAlcohol: ''
+                selectedAlcohol: '',
+                canProceed: false,
             });
         }
     };
 
     handleDrink = (drink) => {
-        const { canBack, selectedDrink } = this.state;
-        this.setState({
-            canBack: !canBack
-        });
+        const { selectedDrink } = this.state;
         if(drink !== selectedDrink) {
             this.setState({
-                selectedDrink: drink
+                selectedDrink: drink,
+                canProceed: true,
             });
         } else {
             this.setState({
-                selectedDrink: ''
+                selectedDrink: '',
+                canProceed: false,
             });
         }
     };
@@ -101,7 +99,7 @@ class DrinkMixing extends React.Component {
     };
 
     render() {
-        const {canProceed, canBack, selectedAlcohol, selectedDrink, selectedSyrup, alcoholAmount, softAmount} = this.state;
+        const {canProceed, selectedAlcohol, selectedDrink, selectedSyrup, alcoholAmount, softAmount} = this.state;
         return (
             <div className="bar-container">
                 <Drinks
@@ -109,7 +107,7 @@ class DrinkMixing extends React.Component {
                     drink={alcohol}
                     title="Pick an alcohol"
                     canProceed={canProceed}
-                    canBack={canBack}
+                    canBack={false}
                     selected={selectedAlcohol}
                     buttonText="next"
                     nextOnClick={() => this.handleStep(1)}
@@ -120,7 +118,7 @@ class DrinkMixing extends React.Component {
                     drink={softDrinks}
                     title="What to mix it with?"
                     canProceed={canProceed}
-                    canBack={canBack}
+                    canBack={true}
                     selected={selectedDrink}
                     buttonText="next"
                     nextOnClick={() => this.handleStep(1)}
@@ -142,7 +140,7 @@ class DrinkMixing extends React.Component {
                     onClick={this.handleSyrup}
                     syrups={syrups}
                     canProceed={canProceed}
-                    canBack={canBack}
+                    canBack={true}
                     selected={selectedSyrup}
                     buttonText="back"
                     nextOnClick={() => this.handleStep(1)}
