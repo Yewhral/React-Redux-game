@@ -98,63 +98,90 @@ class DrinkMixing extends React.Component {
         }
     };
 
-    render() {
+    selectStep = (step) => {
         const {canProceed, selectedAlcohol, selectedDrink, selectedSyrup, alcoholAmount, softAmount} = this.state;
+        switch (step) {
+            case 0:
+                return (
+                    <Drinks
+                        onClick={this.handleAlcohol}
+                        drink={alcohol}
+                        title="Pick an alcohol"
+                        canProceed={canProceed}
+                        canBack={false}
+                        selected={selectedAlcohol}
+                        buttonText="next"
+                        nextOnClick={() => this.handleStep(1)}
+                        backOnClick={() => this.handleStep(-1)}
+                    />
+                );
+            case 1:
+                return (
+                    <Drinks
+                        onClick={this.handleDrink}
+                        drink={softDrinks}
+                        title="What to mix it with?"
+                        canProceed={canProceed}
+                        canBack={true}
+                        selected={selectedDrink}
+                        buttonText="next"
+                        nextOnClick={() => this.handleStep(1)}
+                        backOnClick={() => this.handleStep(-1)}
+                    />
+                );
+            case 2:
+                return (
+                    <Proportions
+                        alcohol={'beer'}
+                        alcoholAmount={alcoholAmount}
+                        soft={'energy drink'}
+                        softAmount={softAmount}
+                        buttonText="next"
+                        nextOnClick={() => this.handleStep(1)}
+                        backOnClick={() => this.handleStep(-1)}
+                        alcoholIncrease={() => this.handleProportions("alcohol")}
+                        softIncrease={() => this.handleProportions("soft")}
+                    />
+                );
+            case 3:
+                return (
+                    <SyrupSelection
+                        title="Add Syrup"
+                        onClick={this.handleSyrup}
+                        syrups={syrups}
+                        canProceed={canProceed}
+                        canBack={true}
+                        selected={selectedSyrup}
+                        buttonText="back"
+                        nextOnClick={() => this.handleStep(1)}
+                        backOnClick={() => this.handleStep(-1)}
+                    />
+                );
+            case 4:
+                return (
+                    <div>
+                        <ScreenTitle title="Finishing touch!" />
+                        <NavigationLink
+                            linkText = 'Serve your drink!'
+                            destination = ''
+                        />
+                        <NavigationLink
+                            linkText = 'Back to menu'
+                            destination = ''
+                        />
+                    </div>
+                );
+            default:
+                break;
+        }
+    };
+
+    render() {
+        const {currentStep} = this.state;
+        const chosenStep = this.selectStep(currentStep);
         return (
             <div className="bar-container">
-                <Drinks
-                    onClick={this.handleAlcohol}
-                    drink={alcohol}
-                    title="Pick an alcohol"
-                    canProceed={canProceed}
-                    canBack={false}
-                    selected={selectedAlcohol}
-                    buttonText="next"
-                    nextOnClick={() => this.handleStep(1)}
-                    backOnClick={() => this.handleStep(-1)}
-                />
-                <Drinks
-                    onClick={this.handleDrink}
-                    drink={softDrinks}
-                    title="What to mix it with?"
-                    canProceed={canProceed}
-                    canBack={true}
-                    selected={selectedDrink}
-                    buttonText="next"
-                    nextOnClick={() => this.handleStep(1)}
-                    backOnClick={() => this.handleStep(-1)}
-                />
-                <Proportions
-                    alcohol={'beer'}
-                    alcoholAmount={alcoholAmount}
-                    soft={'energy drink'}
-                    softAmount={softAmount}
-                    buttonText="next"
-                    nextOnClick={() => this.handleStep(1)}
-                    backOnClick={() => this.handleStep(-1)}
-                    alcoholIncrease={() => this.handleProportions("alcohol")}
-                    softIncrease={() => this.handleProportions("soft")}
-                />
-                <SyrupSelection
-                    title="Add Syrup"
-                    onClick={this.handleSyrup}
-                    syrups={syrups}
-                    canProceed={canProceed}
-                    canBack={true}
-                    selected={selectedSyrup}
-                    buttonText="back"
-                    nextOnClick={() => this.handleStep(1)}
-                    backOnClick={() => this.handleStep(-1)}
-                />
-                <ScreenTitle title="Finishing touch!" />
-                <NavigationLink
-                    linkText = 'Serve your drink!'
-                    destination = ''
-                />
-                <NavigationLink
-                    linkText = 'Back to menu'
-                    destination = ''
-                />
+                {chosenStep}
             </div>
         );
     }
