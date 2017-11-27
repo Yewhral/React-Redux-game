@@ -130,9 +130,9 @@ class DrinkMixing extends React.Component {
             case 2:
                 return (
                     <Proportions
-                        alcohol={'beer'}
+                        alcohol={selectedAlcohol}
                         alcoholAmount={alcoholAmount}
-                        soft={'energy drink'}
+                        soft={selectedDrink}
                         softAmount={softAmount}
                         buttonText="next"
                         nextOnClick={() => this.handleStep(1)}
