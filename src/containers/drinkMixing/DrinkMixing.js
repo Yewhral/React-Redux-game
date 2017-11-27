@@ -82,14 +82,12 @@ class DrinkMixing extends React.Component {
         }
     };
 
-    handleSyrup = (selectedSyrup) => {
-        const { canProceed } = this.state;
-        this.setState({
-            canProceed: !canProceed
-        });
-        if(selectedSyrup !== this.state.selectedSyrup) {
+    handleSyrup = (syrup) => {
+        const { selectedSyrup } = this.state;
+        if(syrup !== selectedSyrup) {
             this.setState({
-                selectedSyrup: selectedSyrup
+                selectedSyrup: syrup,
+                canProceed: true,
             });
         } else {
             this.setState({
@@ -152,7 +150,7 @@ class DrinkMixing extends React.Component {
                         canProceed={canProceed}
                         canBack={true}
                         selected={selectedSyrup}
-                        buttonText="back"
+                        buttonText="next"
                         nextOnClick={() => this.handleStep(1)}
                         backOnClick={() => this.handleStep(-1)}
                     />
