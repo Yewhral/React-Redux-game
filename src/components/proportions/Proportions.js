@@ -20,22 +20,23 @@ const Proportions = ({
         <div>
             <div className="proportionsContainer">
                 <ScreenTitle title="Select proportions" />
-                <div className="proportions">
-                    <ProportionButton
-                        drink={alcohol}
-                        onClick={alcoholIncrease}
-                    />
+                <div className="flex">
                     <Input
-                        className="inputs"
                         readOnly="true"
                         value={alcoholAmount}
                     />
-                    <span className="separator">
-                        /
-                    </span>
+                    <div className="separator">
+                        :
+                    </div>
                     <Input
                         readOnly="true"
                         value={softAmount}
+                    />
+                </div>
+                <div className="flex">
+                    <ProportionButton
+                        drink={alcohol}
+                        onClick={alcoholIncrease}
                     />
                     <ProportionButton
                         drink={soft}

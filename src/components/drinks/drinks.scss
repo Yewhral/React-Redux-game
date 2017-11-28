@@ -10,10 +10,12 @@
     grid-row-gap: 20px;
     padding: 0 35px 0 35px;
     margin: auto;
+
     .bottle {
       box-sizing: border-box;
       border: 1px solid black;
     }
+
     .selected {
       outline: 3px solid $white1;
     }
@@ -35,14 +37,17 @@
       line-height: 21px;
     }
   }
+
   .buttons {
     margin-top: 24px;
     width: 80%;
     margin-left: 10%;
     display: inline-block;
+
     .back {
       float: left;
     }
+
     .proceed {
       float: right;
     }

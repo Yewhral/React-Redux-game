@@ -4,16 +4,15 @@ import TextBox from '../../components/textBox/TextBox';
 import "./creditsBox.css";
 
 class CreditsBox extends React.Component {
-    creditsText = 'This is a mini-game that I created to better understand React combined with Redux. ' +
-        'Additionally I am trying mobile-first approach and this happened to be the most challenging part of the project.';
-
     render() {
+        const creditsText = 'This is a mini-game that I created to better understand React combined with Redux. ' +
+            'Additionally I am trying mobile-first approach and this happened to be the most challenging part of the project.';
         return (
             <div className="credits-container">
                 <div className="credits">
                     <TextBox
                         title = 'About the game'
-                        text = {this.creditsText}
+                        text = {creditsText}
                     />
                     <NavigationLink
                         linkText = 'Back to menu'

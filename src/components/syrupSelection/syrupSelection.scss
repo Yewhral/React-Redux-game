@@ -4,6 +4,7 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+
   .syrups {
     margin: 0;
     list-style: none;
@@ -12,10 +13,12 @@
     font-weight: 600;
     font-size: 14px;
   }
+
   .syrup {
     margin-bottom: 15px;
     cursor: pointer;
   }
+
   .colorBox {
     display: inline-block;
     height: 22px;
@@ -25,6 +28,7 @@
     top: 7px;
     margin-right: 10px;
   }
+
   .selected {
     color: $transBlack1;
     margin-bottom: 15px;
