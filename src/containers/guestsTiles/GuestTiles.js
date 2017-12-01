@@ -20,13 +20,14 @@ class GuestTiles extends React.Component {
     }
 
     guestSelection = (guest) => {
-        this.props.setGuest(guest.name);
-        this.props.setStrength(guest.strong);
-        this.props.setSweetness(guest.sweet);
-        this.props.setCraziness(guest.crazy);
-        this.props.setFanciness(guest.fancy);
-        this.props.setPhoto(guest.photo);
-        this.props.setGuestStep(1);
+        const {setGuest, setStrength, setSweetness, setCraziness, setFanciness, setPhoto, setGuestStep} = this.props;
+        setGuest(guest.name);
+        setStrength(guest.strong);
+        setSweetness(guest.sweet);
+        setCraziness(guest.crazy);
+        setFanciness(guest.fancy);
+        setPhoto(guest.photo);
+        setGuestStep(1);
     };
 
     render() {
@@ -36,8 +37,8 @@ class GuestTiles extends React.Component {
                 <div className="guests-container">
                     <GuestTile
                         guestPhoto={asianSmall}
-                        guestName="Ariel"
-                        onClick={() => {this.guestSelection(guest.Ariel)}}
+                        guestName="Lucy"
+                        onClick={() => {this.guestSelection(guest.Lucy)}}
                     />
                     <GuestTile
                         guestPhoto={asianSmall}
@@ -51,8 +52,8 @@ class GuestTiles extends React.Component {
                     />
                     <GuestTile
                         guestPhoto={asianSmall}
-                        guestName="Lucy"
-                        onClick={() => {this.guestSelection(guest.Lucy)}}
+                        guestName="Ariel"
+                        onClick={() => {this.guestSelection(guest.Ariel)}}
                     />
                 </div>
                 <NavigationLink

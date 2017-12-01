@@ -22,20 +22,21 @@ class GuestInfo extends React.Component {
     }
 
     render() {
+        const {strong, sweet, crazy, fancy, photo, guest, setGuestStep} = this.props;
         return (
             <div className="guestDetails">
                 <ScreenTitle
                     title="Who will be your guest?"
                 />
                 <GuestPic
-                    guestPhoto={this.props.photo}
-                    guestName={this.props.guest}
+                    guestPhoto={photo}
+                    guestName={guest}
                 />
                 <GuestStats
-                    strong={this.props.strong}
-                    sweet={this.props.sweet}
-                    crazy={this.props.crazy}
-                    fancy={this.props.fancy}
+                    strong={strong}
+                    sweet={sweet}
+                    crazy={crazy}
+                    fancy={fancy}
                 />
                 <NavigationLink
                     linkText = 'Choose this guest'
@@ -43,7 +44,7 @@ class GuestInfo extends React.Component {
                 />
                 <NavigationButton
                     buttonText = 'Go back'
-                    onClick={() => { this.props.setGuestStep(0); }}
+                    onClick={() => { setGuestStep(0); }}
                 />
             </div>
         );
