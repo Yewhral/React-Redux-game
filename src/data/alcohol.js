@@ -12,6 +12,7 @@ const alcohol = [
         sweet: 0,
         crazy: 0,
         fancy: 0,
+        color: '#fcb124',
         image: beer
     },
     {
@@ -20,6 +21,7 @@ const alcohol = [
         sweet: 0,
         crazy: 5,
         fancy: 0,
+        color: 'transparent',
         image: vodka
     },
     {
@@ -28,6 +30,7 @@ const alcohol = [
         sweet: 2,
         crazy: 3,
         fancy: 2,
+        color: '#f4d0a4',
         image: tequila
     },
     {
@@ -36,6 +39,7 @@ const alcohol = [
         sweet: 1,
         crazy: 2,
         fancy: 3,
+        color: '#d29062',
         image: whiskey
     },
     {
@@ -44,6 +48,7 @@ const alcohol = [
         sweet: 3,
         crazy: 3,
         fancy: 2,
+       color: '#d9dfcd',
         image: gin
     },
     {
@@ -52,6 +57,7 @@ const alcohol = [
         sweet: 5,
         crazy: 2,
         fancy: 3,
+        color: '#9d702e',
         image: rum
     }
 ];

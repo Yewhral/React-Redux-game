@@ -12,6 +12,7 @@ const softDrink = [
         sweet: 4,
         crazy: 1,
         fancy: 1,
+        color: '#080808',
         image: cola
     },
     {
@@ -20,6 +21,7 @@ const softDrink = [
         sweet: 1,
         crazy: 2,
         fancy: 0,
+        color: '#fffcfe',
         image: milk
     },
     {
@@ -28,6 +30,7 @@ const softDrink = [
         sweet: 0,
         crazy: 2,
         fancy: 1,
+        color: 'transparent',
         image: tonic
     },
     {
@@ -36,6 +39,7 @@ const softDrink = [
         sweet: 2,
         crazy: 1,
         fancy: 0,
+        color: '#fead14',
         image: orange
     },
     {
@@ -44,6 +48,7 @@ const softDrink = [
         sweet: 2,
         crazy: 5,
         fancy: 0,
+        color: '#f5f276',
         image: energy
     },
     {
@@ -52,6 +57,7 @@ const softDrink = [
         sweet: 0,
         crazy: 3,
         fancy: 0,
+        color: '#f82b1e',
         image: tomato
     }
 ];
