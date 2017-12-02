@@ -12,9 +12,9 @@ const Decorations = ({
 }) => {
     const decors = ["olive", "straw", "palm", "lemon", "mint", "flame", "cherry", "??"];
     const decorations = decors.map((element) =>(
-        <div>
+        <div key={element}>
             <input type="checkbox" id={element} />
-            <label for={element}>{element}</label>
+            <label htmlFor={element}>{element}</label>
         </div>
     ));
     return (
