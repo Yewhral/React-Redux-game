@@ -1,10 +1,9 @@
 import React from 'react';
-import ScreenTitle from '../../components/screenTitle/ScreenTitle';
 import Drinks from '../../components/drinks/Drinks';
 import SyrupSelection from '../../components/syrupSelection/SyrupSelection';
-import NavigationLink from '../../components/navigationLink/NavigationLink';
 import Proportions from '../../components/proportions/Proportions';
 import Decorations from '../../components/decorations/Decorations';
+import Preview from '../../components/preview/Preview';
 import alcohol from '../../data/alcohol';
 import softDrinks from '../../data/softDrinks';
 import syrups from '../../data/syrups';
@@ -164,17 +163,9 @@ class DrinkMixing extends React.Component {
                 );
             case 5:
                 return (
-                    <div>
-                        <ScreenTitle title="Summary" />
-                        <NavigationLink
-                            linkText = 'Serve your drink!'
-                            destination = ''
-                        />
-                        <NavigationLink
-                            linkText = 'Back to menu'
-                            destination = ''
-                        />
-                    </div>
+                    <Preview
+                        title="Summary"
+                    />
                 );
             default:
                 break;
