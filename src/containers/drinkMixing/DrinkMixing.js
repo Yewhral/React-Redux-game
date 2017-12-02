@@ -146,7 +146,7 @@ class DrinkMixing extends React.Component {
                         syrups={syrups}
                         canProceed={canProceed}
                         canBack={true}
-                        selected={selectedSyrup}
+                        selected={selectedSyrup.name}
                         nextOnClick={() => this.handleStep(1)}
                         backOnClick={() => this.handleStep(-1)}
                     />
@@ -165,6 +165,9 @@ class DrinkMixing extends React.Component {
                 return (
                     <Preview
                         title="Summary"
+                        syrupColor={selectedSyrup.color}
+                        alcoholAmount={alcoholAmount}
+                        softAmount={softAmount}
                     />
                 );
             default:

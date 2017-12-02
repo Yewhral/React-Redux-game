@@ -21,7 +21,7 @@ const SyrupSelection = ({
         <li
             className={"syrup" && (selected === syrup.name ? 'selected' : 'syrup')}
             key={syrup.name}
-            onClick={() => {handleClick(syrup.name)}}
+            onClick={() => {handleClick(syrup)}}
         >
             <div className="colorBox" style={{backgroundColor: syrup.color}}>
             </div>

@@ -4,17 +4,25 @@ import NavigationLink from '../navigationLink/NavigationLink';
 import "./preview.css";
 
 const Preview = ({
-
     title,
+    alcoholAmount,
+    alcoholColor,
+    softAmount,
+    softColor,
+    syrupColor,
 }) => {
-    const alcoStyle = {
-        background: "blue"
+    const percentageAlcoholAmount = alcoholAmount/100;
+    const percentageSoftAmount = softAmount/100;
+    const alcoholStyle = {
+        backgroundColor: alcoholColor,
+        opacity: percentageAlcoholAmount,
     };
     const softStyle = {
-        background: "blue"
+        backgroundColor: softColor,
+        opacity: percentageSoftAmount,
     };
     const syrupStyle = {
-        background: "blue"
+        backgroundColor: syrupColor
     };
     return (
         <div className="summaryContainer">
@@ -23,12 +31,12 @@ const Preview = ({
                 <div className="glass"></div>
                 <div
                     className="liquid alcohol"
-                    style={alcoStyle}
+                    style={alcoholStyle}
                 >
                 </div>
                 <div
                     className="liquid softDrink"
-                    style={softStyle}>
+                    style={softStyle}
                 >
                 </div>
                 <div
