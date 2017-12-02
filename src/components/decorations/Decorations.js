@@ -10,11 +10,18 @@ const Decorations = ({
     canProceed,
     canBack,
 }) => {
+    const decors = ["olive", "straw", "palm", "lemon", "mint", "flame", "cherry", "??"];
+    const decorations = decors.map((element) =>(
+        <div>
+            <input type="checkbox" id={element} />
+            <label for={element}>{element}</label>
+        </div>
+    ));
     return (
         <div className="decorationsContainer">
             <ScreenTitle title={title} />
             <div className="drinks">
-
+                {decorations}
             </div>
             <StepNavigation
                 canBack={canBack}
