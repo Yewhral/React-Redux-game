@@ -7,7 +7,6 @@ const StepNavigation = ({
     backOnClick,
     canProceed,
     canBack,
-    buttonText,
 }) => {
     return (
         <div className="buttons">
@@ -25,7 +24,7 @@ const StepNavigation = ({
                     canProceed === true &&
                     <StepButton
                         onClick={nextOnClick}
-                        buttonText={buttonText}
+                        buttonText="next"
                     />
                 }
             </div>

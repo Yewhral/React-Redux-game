@@ -11,7 +11,6 @@ const SyrupSelection = ({
     title,
     canProceed,
     canBack,
-    buttonText,
     selected
 }) => {
     const handleClick = (i) => {
@@ -41,7 +40,6 @@ const SyrupSelection = ({
             <StepNavigation
                 canBack={canBack}
                 canProceed={canProceed}
-                buttonText={buttonText}
                 nextOnClick={nextOnClick}
                 backOnClick={backOnClick}
             />

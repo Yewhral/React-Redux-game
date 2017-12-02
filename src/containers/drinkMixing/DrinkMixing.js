@@ -4,6 +4,7 @@ import Drinks from '../../components/drinks/Drinks';
 import SyrupSelection from '../../components/syrupSelection/SyrupSelection';
 import NavigationLink from '../../components/navigationLink/NavigationLink';
 import Proportions from '../../components/proportions/Proportions';
+import Decorations from '../../components/decorations/Decorations';
 import alcohol from '../../data/alcohol';
 import softDrinks from '../../data/softDrinks';
 import syrups from '../../data/syrups';
@@ -108,7 +109,6 @@ class DrinkMixing extends React.Component {
                         canProceed={canProceed}
                         canBack={false}
                         selected={selectedAlcohol}
-                        buttonText="next"
                         nextOnClick={() => this.handleStep(1)}
                         backOnClick={() => this.handleStep(-1)}
                     />
@@ -122,7 +122,6 @@ class DrinkMixing extends React.Component {
                         canProceed={canProceed}
                         canBack={true}
                         selected={selectedDrink}
-                        buttonText="next"
                         nextOnClick={() => this.handleStep(1)}
                         backOnClick={() => this.handleStep(-1)}
                     />
@@ -134,7 +133,6 @@ class DrinkMixing extends React.Component {
                         alcoholAmount={alcoholAmount}
                         soft={selectedDrink}
                         softAmount={softAmount}
-                        buttonText="next"
                         nextOnClick={() => this.handleStep(1)}
                         backOnClick={() => this.handleStep(-1)}
                         alcoholIncrease={() => this.handleProportions("alcohol")}
@@ -150,15 +148,24 @@ class DrinkMixing extends React.Component {
                         canProceed={canProceed}
                         canBack={true}
                         selected={selectedSyrup}
-                        buttonText="next"
                         nextOnClick={() => this.handleStep(1)}
                         backOnClick={() => this.handleStep(-1)}
                     />
                 );
             case 4:
                 return (
+                    <Decorations
+                        title="Finishing touch!"
+                        canProceed={true}
+                        canBack={true}
+                        nextOnClick={() => this.handleStep(1)}
+                        backOnClick={() => this.handleStep(-1)}
+                    />
+                );
+            case 5:
+                return (
                     <div>
-                        <ScreenTitle title="Finishing touch!" />
+                        <ScreenTitle title="Summary" />
                         <NavigationLink
                             linkText = 'Serve your drink!'
                             destination = ''

@@ -14,7 +14,6 @@ const Proportions = ({
     softIncrease,
     nextOnClick,
     backOnClick,
-    buttonText,
 }) => {
     return (
         <div>
@@ -49,7 +48,6 @@ const Proportions = ({
                 canProceed={true}
                 nextOnClick={nextOnClick}
                 backOnClick={backOnClick}
-                buttonText={buttonText}
             />
         </div>
     );

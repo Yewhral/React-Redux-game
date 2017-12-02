@@ -1,0 +1,20 @@
+@import '../../styles/variables.scss';
+
+.decorationsContainer {
+
+  .buttons {
+    margin-top: 24px;
+    width: 80%;
+    margin-left: 10%;
+    display: inline-block;
+
+    .back {
+      float: left;
+    }
+
+    .proceed {
+      float: right;
+    }
+  }
+}
+
