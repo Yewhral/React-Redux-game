@@ -107,7 +107,7 @@ class DrinkMixing extends React.Component {
                         title="Pick an alcohol"
                         canProceed={canProceed}
                         canBack={false}
-                        selected={selectedAlcohol}
+                        selected={selectedAlcohol.name}
                         nextOnClick={() => this.handleStep(1)}
                         backOnClick={() => this.handleStep(-1)}
                     />
@@ -120,7 +120,7 @@ class DrinkMixing extends React.Component {
                         title="What to mix it with?"
                         canProceed={canProceed}
                         canBack={true}
-                        selected={selectedDrink}
+                        selected={selectedDrink.name}
                         nextOnClick={() => this.handleStep(1)}
                         backOnClick={() => this.handleStep(-1)}
                     />
@@ -128,9 +128,9 @@ class DrinkMixing extends React.Component {
             case 2:
                 return (
                     <Proportions
-                        alcohol={selectedAlcohol}
+                        alcohol={selectedAlcohol.name}
                         alcoholAmount={alcoholAmount}
-                        soft={selectedDrink}
+                        soft={selectedDrink.name}
                         softAmount={softAmount}
                         nextOnClick={() => this.handleStep(1)}
                         backOnClick={() => this.handleStep(-1)}
@@ -167,7 +167,9 @@ class DrinkMixing extends React.Component {
                         title="Summary"
                         syrupColor={selectedSyrup.color}
                         alcoholAmount={alcoholAmount}
+                        alcoholColor={selectedAlcohol.color}
                         softAmount={softAmount}
+                        softColor={selectedDrink.color}
                     />
                 );
             default:

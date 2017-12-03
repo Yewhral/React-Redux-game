@@ -21,7 +21,7 @@ const Drinks = ({
         <div
             className={"bottle" && (selected === drink.name ? 'selected' : 'bottle')}
             key={drink.name}
-            onClick={() => {handleClick(drink.name)}}
+            onClick={() => {handleClick(drink)}}
         >
             <img
                 src={drink.image}
