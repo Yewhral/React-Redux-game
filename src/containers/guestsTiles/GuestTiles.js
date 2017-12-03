@@ -7,6 +7,9 @@ import { setGuest, setStrength, setSweetness, setCraziness, setFanciness, setPho
 import {setScrollOnTop} from '../../utils/utils';
 import guest from '../../data/guests';
 import asianSmall from '../../images/asianSmall.jpg';
+import Lucy from '../../images/Lucy.jpg';
+import Clark from '../../images/Clark.jpg';
+import Simon from '../../images/Simon.jpg';
 import './guestTiles.css'
 
 class GuestTiles extends React.Component {
@@ -36,17 +39,17 @@ class GuestTiles extends React.Component {
                 <ScreenTitle title="Who will be your guest?" />
                 <div className="guests-container">
                     <GuestTile
-                        guestPhoto={asianSmall}
+                        guestPhoto={Lucy}
                         guestName="Lucy"
                         onClick={() => {this.guestSelection(guest.Lucy)}}
                     />
                     <GuestTile
-                        guestPhoto={asianSmall}
+                        guestPhoto={Clark}
                         guestName="Clark"
                         onClick={() => {this.guestSelection(guest.Clark)}}
                     />
                     <GuestTile
-                        guestPhoto={asianSmall}
+                        guestPhoto={Simon}
                         guestName="Simon"
                         onClick={() => {this.guestSelection(guest.Simon)}}
                     />

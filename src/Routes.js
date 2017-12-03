@@ -5,6 +5,7 @@ import Credits from './views/Credits';
 import DrinkPreparation from './views/DrinkPreparation';
 import GameDescription from './views/GameDescription';
 import Guests from './views/Guests';
+import Results from './views/Results';
 import MainMenu from './views/MainMenu';
 
 class Routes extends React.Component {
@@ -15,7 +16,7 @@ class Routes extends React.Component {
             <Route exact={true} path="/" component={MainMenu} />
             <Route exact={true} path="/help" component={GameDescription} />
             <Route exact={true} path="/pubmaster" component={DrinkPreparation}/>
-            <Route exact={true} path="/results" component={DrinkPreparation}/>
+            <Route exact={true} path="/results" component={Results}/>
             <Route exact={true} path="/guests" component={Guests}/>
             <Route exact={true} path="/credits" component={Credits}/>
         </Switch>

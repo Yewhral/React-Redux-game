@@ -1,4 +1,7 @@
 import asianSmall from '../images/asianSmall.jpg';
+import Lucy from '../images/Lucy.jpg';
+import Clark from '../images/Clark.jpg';
+import Simon from '../images/Simon.jpg';
 
 const guest = {
     Lucy: {
@@ -7,7 +10,7 @@ const guest = {
         sweet: 3,
         crazy: 5,
         fancy: 2,
-        photo: asianSmall
+        photo: Lucy
     },
     Clark: {
         name: "Clark",
@@ -15,7 +18,7 @@ const guest = {
         sweet: 2,
         crazy: 1,
         fancy: 2,
-        photo: asianSmall
+        photo: Clark
     },
     Simon: {
         name: "Simon",
@@ -23,7 +26,7 @@ const guest = {
         sweet: 3,
         crazy: 3,
         fancy: 1,
-        photo: asianSmall
+        photo: Simon
     },
     Ariel: {
         name: "Ariel",
