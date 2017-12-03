@@ -50,7 +50,7 @@ const Preview = ({
             </div>
             <NavigationLink
                 linkText = 'Serve your drink!'
-                destination = ''
+                destination = 'results'
             />
             <StepButton
                 onClick={backOnClick}
