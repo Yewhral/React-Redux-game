@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {Switch} from 'react-router-dom';
 import Credits from './views/Credits';
 import DrinkPreparation from './views/DrinkPreparation';
