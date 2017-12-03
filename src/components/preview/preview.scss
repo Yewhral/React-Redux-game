@@ -38,6 +38,33 @@
 
   .syrup {
     z-index: 3;
-    height: 80px;
+    height: 90px;
+  }
+
+}
+
+.summaryContainer {
+  .stepButton {
+    color: $white1;
+    text-decoration: none;
+    line-height: 54px;
+    font-weight: 600;
+    font-size: 16px;
+    outline: 0;
+    width: 256px;
+    box-sizing: border-box;
+    height: 54px;
+    background: $brown4;
+    text-align: center;
+    margin-bottom: 46px;
+    margin-left: 10%;
+    border-left: 40px solid $transBlack1;
+    border-right: 40px solid $transBlack1;
+    transition: border-left 0.5s ease-out, border-right 0.5s ease-out ;
+    &:hover {
+      border-left: 5px solid rgba(0,0,0,0.5);
+      border-right: 5px solid rgba(0,0,0,0.5);
+      transition: border-left 0.5s ease-out, border-right 0.5s ease-out ;
+    }
   }
 }

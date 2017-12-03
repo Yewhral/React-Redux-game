@@ -1,6 +1,7 @@
 import React from 'react';
 import ScreenTitle from '../screenTitle/ScreenTitle';
 import NavigationLink from '../navigationLink/NavigationLink';
+import StepButton from '../stepButton/StepButton';
 import "./preview.css";
 
 const Preview = ({
@@ -10,9 +11,11 @@ const Preview = ({
     softAmount,
     softColor,
     syrupColor,
+    backOnClick,
 }) => {
     const percentageAlcoholAmount = alcoholAmount/100;
     const percentageSoftAmount = softAmount/100;
+    const syrupGradient = `linear-gradient(0deg, ${syrupColor} 50%, transparent)`;
     const alcoholStyle = {
         backgroundColor: alcoholColor,
         opacity: percentageAlcoholAmount,
@@ -22,7 +25,7 @@ const Preview = ({
         opacity: percentageSoftAmount,
     };
     const syrupStyle = {
-        backgroundColor: syrupColor
+        backgroundImage: syrupGradient,
     };
     return (
         <div className="summaryContainer">
@@ -49,9 +52,9 @@ const Preview = ({
                 linkText = 'Serve your drink!'
                 destination = ''
             />
-            <NavigationLink
-                linkText = 'Remake into a button'
-                destination = ''
+            <StepButton
+                onClick={backOnClick}
+                buttonText="Back"
             />
         </div>
     );

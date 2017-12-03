@@ -170,6 +170,7 @@ class DrinkMixing extends React.Component {
                         alcoholColor={selectedAlcohol.color}
                         softAmount={softAmount}
                         softColor={selectedDrink.color}
+                        backOnClick={() => this.handleStep(-1)}
                     />
                 );
             default:
