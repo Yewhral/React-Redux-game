@@ -11,6 +11,10 @@
     padding: 0 35px 0 35px;
     margin: auto;
 
+    .bottle, .selected {
+      cursor: pointer;
+    }
+
     .bottle {
       box-sizing: border-box;
       border: 1px solid black;

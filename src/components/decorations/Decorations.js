@@ -1,7 +1,7 @@
 import React from 'react';
 import ScreenTitle from '../screenTitle/ScreenTitle';
-import StepNavigation from '../stepNavigation/StepNavigation'
-import './decorations.scss'
+import StepNavigation from '../stepNavigation/StepNavigation';
+import './decorations.css';
 
 const Decorations = ({
     nextOnClick,
@@ -13,8 +13,8 @@ const Decorations = ({
     const decors = ["olive", "straw", "palm", "lemon", "mint", "flame", "cherry", "??"];
     const decorations = decors.map((element) =>(
         <div key={element}>
-            <input type="checkbox" id={element} />
-            <label htmlFor={element}>{element}</label>
+            <input type="checkbox" id={element} className="checkbox" />
+            <label htmlFor={element} className="label"><div className="labelHolder">{element}</div></label>
         </div>
     ));
     return (

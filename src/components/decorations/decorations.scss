@@ -2,6 +2,30 @@
 
 .decorationsContainer {
 
+  .checkbox[type=checkbox] {
+    visibility: hidden;
+  }
+
+  .checkbox[type=checkbox]:checked + .label {
+    .labelHolder {
+      color: $brown4;
+      font-weight: bold;
+      background: $brown1;
+    }
+  }
+
+  .labelHolder {
+    font-size: 12px;
+    font-weight: normal;
+    color: $white1;
+    height: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background: $transBlack2;
+    cursor: pointer;
+  }
+
   .buttons {
     margin-top: 24px;
     width: 80%;
