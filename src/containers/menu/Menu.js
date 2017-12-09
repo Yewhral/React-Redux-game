@@ -1,6 +1,6 @@
 import React from 'react';
 import NavigationLink from '../../components/navigationLink/NavigationLink';
-import Ariel from '../../images/asianSmall.jpg';
+import Ariel from '../../images/Ariel.jpg';
 import Lucy from '../../images/Lucy.jpg';
 import Clark from '../../images/Clark.jpg';
 import Simon from '../../images/Simon.jpg';

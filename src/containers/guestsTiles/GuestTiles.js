@@ -6,7 +6,7 @@ import NavigationLink from '../../components/navigationLink/NavigationLink';
 import { setGuest, setStrength, setSweetness, setCraziness, setFanciness, setPhoto, setGuestStep } from '../../redux/actions';
 import {setScrollOnTop} from '../../utils/utils';
 import guest from '../../data/guests';
-import asianSmall from '../../images/asianSmall.jpg';
+import Ariel from '../../images/Ariel.jpg';
 import Lucy from '../../images/Lucy.jpg';
 import Clark from '../../images/Clark.jpg';
 import Simon from '../../images/Simon.jpg';
@@ -55,7 +55,7 @@ class GuestTiles extends React.Component {
                             onClick={() => {this.guestSelection(guest.Simon)}}
                         />
                         <GuestTile
-                            guestPhoto={asianSmall}
+                            guestPhoto={Ariel}
                             guestName="Ariel"
                             onClick={() => {this.guestSelection(guest.Ariel)}}
                         />

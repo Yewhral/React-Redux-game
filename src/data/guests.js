@@ -1,4 +1,4 @@
-import asianSmall from '../images/asianSmall.jpg';
+import Ariel from '../images/Ariel.jpg';
 import Lucy from '../images/Lucy.jpg';
 import Clark from '../images/Clark.jpg';
 import Simon from '../images/Simon.jpg';
@@ -34,7 +34,7 @@ const guest = {
         sweet: 3,
         crazy: 1,
         fancy: 2,
-        photo: asianSmall
+        photo: Ariel
     }
 
 };
