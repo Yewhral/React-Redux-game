@@ -24,28 +24,30 @@ class GuestInfo extends React.Component {
     render() {
         const {strong, sweet, crazy, fancy, photo, guest, setGuestStep} = this.props;
         return (
-            <div className="guestDetails">
-                <ScreenTitle
-                    title="Who will be your guest?"
-                />
-                <GuestPic
-                    guestPhoto={photo}
-                    guestName={guest}
-                />
-                <GuestStats
-                    strong={strong}
-                    sweet={sweet}
-                    crazy={crazy}
-                    fancy={fancy}
-                />
-                <NavigationLink
-                    linkText = 'Choose this guest'
-                    destination = 'pubmaster'
-                />
-                <NavigationButton
-                    buttonText = 'Go back'
-                    onClick={() => { setGuestStep(0); }}
-                />
+            <div className="guestWrapper">
+                <div className="guestDetails">
+                    <ScreenTitle
+                        title="Who will be your guest?"
+                    />
+                    <GuestPic
+                        guestPhoto={photo}
+                        guestName={guest}
+                    />
+                    <GuestStats
+                        strong={strong}
+                        sweet={sweet}
+                        crazy={crazy}
+                        fancy={fancy}
+                    />
+                    <NavigationLink
+                        linkText = 'Choose this guest'
+                        destination = 'pubmaster'
+                    />
+                    <NavigationButton
+                        buttonText = 'Go back'
+                        onClick={() => { setGuestStep(0); }}
+                    />
+                </div>
             </div>
         );
     }

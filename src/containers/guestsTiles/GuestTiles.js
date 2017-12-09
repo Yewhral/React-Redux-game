@@ -35,34 +35,36 @@ class GuestTiles extends React.Component {
 
     render() {
         return (
-            <div className="grid-positioning">
-                <ScreenTitle title="Who will be your guest?" />
-                <div className="guests-container">
-                    <GuestTile
-                        guestPhoto={Lucy}
-                        guestName="Lucy"
-                        onClick={() => {this.guestSelection(guest.Lucy)}}
-                    />
-                    <GuestTile
-                        guestPhoto={Clark}
-                        guestName="Clark"
-                        onClick={() => {this.guestSelection(guest.Clark)}}
-                    />
-                    <GuestTile
-                        guestPhoto={Simon}
-                        guestName="Simon"
-                        onClick={() => {this.guestSelection(guest.Simon)}}
-                    />
-                    <GuestTile
-                        guestPhoto={asianSmall}
-                        guestName="Ariel"
-                        onClick={() => {this.guestSelection(guest.Ariel)}}
+            <div className="guestWrapper">
+                <div className="grid-positioning">
+                    <ScreenTitle title="Who will be your guest?" />
+                    <div className="guests-container">
+                        <GuestTile
+                            guestPhoto={Lucy}
+                            guestName="Lucy"
+                            onClick={() => {this.guestSelection(guest.Lucy)}}
+                        />
+                        <GuestTile
+                            guestPhoto={Clark}
+                            guestName="Clark"
+                            onClick={() => {this.guestSelection(guest.Clark)}}
+                        />
+                        <GuestTile
+                            guestPhoto={Simon}
+                            guestName="Simon"
+                            onClick={() => {this.guestSelection(guest.Simon)}}
+                        />
+                        <GuestTile
+                            guestPhoto={asianSmall}
+                            guestName="Ariel"
+                            onClick={() => {this.guestSelection(guest.Ariel)}}
+                        />
+                    </div>
+                    <NavigationLink
+                        linkText = 'Back to menu'
+                        destination = ''
                     />
                 </div>
-                <NavigationLink
-                    linkText = 'Back to menu'
-                    destination = ''
-                />
             </div>
         );
     }
