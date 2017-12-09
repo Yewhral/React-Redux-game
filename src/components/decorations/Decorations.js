@@ -14,7 +14,12 @@ const Decorations = ({
     const decorations = decors.map((element) =>(
         <div key={element}>
             <input type="checkbox" id={element} className="checkbox" />
-            <label htmlFor={element} className="label"><div className="labelHolder">{element}</div></label>
+            <label htmlFor={element} className="label">
+                <div className="labelHolder">
+                    <div className="icon"></div>
+                    <div className="labelText">{element}</div>
+                </div>
+            </label>
         </div>
     ));
     return (

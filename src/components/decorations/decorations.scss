@@ -9,16 +9,20 @@
 
   .checkbox[type=checkbox]:checked + .label {
     .labelHolder {
-      color: $brown4;
-      font-weight: bold;
-      background: $brown1;
+      .labelText {
+        color: $brown4;
+        font-weight: bold;
+        background: $brown1;
+      }
+      .icon {
+        background-image: url('../../images/checkedCheckbox.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
     }
   }
 
   .labelHolder {
-    font-size: 12px;
-    font-weight: normal;
-    color: $white1;
     height: 30px;
     width: 80%;
     margin-left: auto;
@@ -26,9 +30,23 @@
     background: $transBlack2;
     cursor: pointer;
     margin-bottom: 15px;
-    line-height: 30px;
-    padding-left: 10%;
     box-sizing: border-box;
+    .labelText {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: normal;
+      color: $white1;
+      line-height: 30px;
+    }
+    .icon {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      margin: 5px;
+      background-image: url('../../images/emptyCheckbox.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
   .buttons {
