@@ -12,7 +12,7 @@
       .labelText {
         color: $brown4;
         font-weight: bold;
-        background: $brown1;
+        letter-spacing: 1px;
       }
       .icon {
         background-image: url('../../images/checkedCheckbox.svg');
@@ -31,13 +31,16 @@
     cursor: pointer;
     margin-bottom: 15px;
     box-sizing: border-box;
+
     .labelText {
       display: inline-block;
       font-size: 14px;
       font-weight: normal;
       color: $white1;
       line-height: 30px;
+      position: absolute;
     }
+
     .icon {
       display: inline-block;
       height: 20px;
@@ -46,6 +49,9 @@
       background-image: url('../../images/emptyCheckbox.svg');
       background-size: contain;
       background-repeat: no-repeat;
+    }
+    &:hover {
+      background: $transBlack1;
     }
   }
 
