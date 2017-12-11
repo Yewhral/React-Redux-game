@@ -4,6 +4,8 @@ import StepNavigation from '../stepNavigation/StepNavigation';
 import './decorations.css';
 
 const Decorations = ({
+    onClick,
+    decorationsChecked,
     nextOnClick,
     backOnClick,
     title,
@@ -11,10 +13,10 @@ const Decorations = ({
     canBack,
 }) => {
     const decors = ["olive", "straw", "palm", "lemon", "mint", "flame", "cherry", "??"];
-    const decorations = decors.map((element) =>(
+    const decorations = decors.map((element, index) =>(
         <div key={element}>
-            <input type="checkbox" id={element} className="checkbox" />
-            <label htmlFor={element} className="label">
+            <input type="checkbox" id={element} className="checkbox" defaultChecked={decorationsChecked[index]} />
+            <label htmlFor={element} className="label" onClick={() => {onClick(index)}}>
                 <div className="labelHolder">
                     <div className="icon"></div>
                     <div className="labelText">{element}</div>

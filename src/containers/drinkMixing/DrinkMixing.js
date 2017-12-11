@@ -23,6 +23,16 @@ class DrinkMixing extends React.Component {
                 softDrink: false,
                 syrup: false,
             },
+            decorationsChecked: [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
             canBack: false,
             currentStep: 0,
         }
@@ -119,8 +129,18 @@ class DrinkMixing extends React.Component {
         }
     };
 
+    toggleCheckbox = (index) => {
+        const { decorationsChecked } = this.state;
+        this.setState(prevState => ({
+            decorationsChecked: {
+                ...prevState.decorationsChecked,
+                [index]: !decorationsChecked[index]
+            },
+        }));
+    };
+
     selectStep = (step) => {
-        const {canProceed, selectedAlcohol, selectedDrink, selectedSyrup, alcoholAmount, softAmount} = this.state;
+        const {canProceed, selectedAlcohol, selectedDrink, selectedSyrup, alcoholAmount, softAmount, decorationsChecked} = this.state;
         switch (step) {
             case 0:
                 return (
@@ -180,6 +200,8 @@ class DrinkMixing extends React.Component {
                         title="Finishing touch!"
                         canProceed={true}
                         canBack={true}
+                        onClick={this.toggleCheckbox}
+                        decorationsChecked={decorationsChecked}
                         nextOnClick={() => this.handleStep(1)}
                         backOnClick={() => this.handleStep(-1)}
                     />
