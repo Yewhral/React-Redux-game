@@ -18,7 +18,11 @@ class DrinkMixing extends React.Component {
             alcoholAmount: 50,
             softAmount: 50,
             selectedSyrup: '',
-            canProceed: false,
+            canProceed: {
+                alcohol: false,
+                softDrink: false,
+                syrup: false,
+            },
             canBack: false,
             currentStep: 0,
         }
@@ -55,44 +59,63 @@ class DrinkMixing extends React.Component {
     handleAlcohol = (alcohol) => {
         const { selectedAlcohol } = this.state;
         if(alcohol !== selectedAlcohol) {
-            this.setState({
+            this.setState(prevState => ({
                 selectedAlcohol: alcohol,
-                canProceed: true,
-            });
+                canProceed: {
+                    ...prevState.canProceed,
+                    alcohol: true
+                },
+            }));
         } else {
-            this.setState({
+            this.setState(prevState => ({
                 selectedAlcohol: '',
-                canProceed: false,
-            });
+                canProceed: {
+                    ...prevState.canProceed,
+                    alcohol: false
+                },
+            }));
         }
     };
 
     handleDrink = (drink) => {
         const { selectedDrink } = this.state;
         if(drink !== selectedDrink) {
-            this.setState({
+            this.setState(prevState => ({
                 selectedDrink: drink,
-                canProceed: true,
-            });
+                canProceed: {
+                    ...prevState.canProceed,
+                    softDrink: true
+                },
+            }));
         } else {
-            this.setState({
+            this.setState(prevState => ({
                 selectedDrink: '',
-                canProceed: false,
-            });
+                canProceed: {
+                    ...prevState.canProceed,
+                    softDrink: false
+                },
+            }));
         }
     };
 
     handleSyrup = (syrup) => {
         const { selectedSyrup } = this.state;
         if(syrup !== selectedSyrup) {
-            this.setState({
+            this.setState(prevState => ({
                 selectedSyrup: syrup,
-                canProceed: true,
-            });
+                canProceed: {
+                    ...prevState.canProceed,
+                    syrup: true
+                },
+            }));
         } else {
-            this.setState({
-                selectedSyrup: ''
-            });
+            this.setState(prevState => ({
+                selectedSyrup: '',
+                canProceed: {
+                    ...prevState.canProceed,
+                    syrup: false
+                },
+            }));
         }
     };
 
@@ -105,7 +128,7 @@ class DrinkMixing extends React.Component {
                         onClick={this.handleAlcohol}
                         drink={alcohol}
                         title="Pick an alcohol"
-                        canProceed={canProceed}
+                        canProceed={canProceed.alcohol}
                         canBack={false}
                         selected={selectedAlcohol.name}
                         nextOnClick={() => this.handleStep(1)}
@@ -118,7 +141,7 @@ class DrinkMixing extends React.Component {
                         onClick={this.handleDrink}
                         drink={softDrinks}
                         title="What to mix it with?"
-                        canProceed={canProceed}
+                        canProceed={canProceed.softDrink}
                         canBack={true}
                         selected={selectedDrink.name}
                         nextOnClick={() => this.handleStep(1)}
@@ -144,7 +167,7 @@ class DrinkMixing extends React.Component {
                         title="Add Syrup"
                         onClick={this.handleSyrup}
                         syrups={syrups}
-                        canProceed={canProceed}
+                        canProceed={canProceed.syrup}
                         canBack={true}
                         selected={selectedSyrup.name}
                         nextOnClick={() => this.handleStep(1)}
