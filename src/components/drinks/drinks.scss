@@ -21,6 +21,7 @@
     }
 
     .selected {
+      font-size: 10px;
       outline: 3px solid $white1;
     }
 
@@ -33,7 +34,7 @@
       text-align: center;
       background: $transBlack1;
       color: $white1;
-      font-size: 10px;
+      font-size: 9px;
       font-weight: bold;
       position: relative;
       bottom: 4px;
