@@ -5,17 +5,17 @@ import './decorations.css';
 
 const Decorations = ({
     onClick,
-    decorationsChecked,
+    decorationsCheck,
+    decors,
     nextOnClick,
     backOnClick,
     title,
     canProceed,
     canBack,
 }) => {
-    const decors = ["olive", "straw", "palm", "lemon", "mint", "flame", "cherry", "??"];
     const decorations = decors.map((element, index) =>(
         <div key={element}>
-            <input type="checkbox" id={element} className="checkbox" defaultChecked={decorationsChecked[index]} />
+            <input type="checkbox" id={element} className="checkbox" defaultChecked={decorationsCheck[index]} />
             <label htmlFor={element} className="label" onClick={() => {onClick(index)}}>
                 <div className="labelHolder">
                     <div className="icon"></div>

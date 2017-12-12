@@ -7,7 +7,7 @@ For now - please don't mind me.
 I'm just playing with different solutions and checking things out here.
 
 Todo next:
-1. Apply visuals to decorations
+1. Apply visuals to decorations, move decorations to drinkMixing, create function rendering only true decors, pass to preview
 2. Unit tests for scoring functions
 3. Build scoring mechanism
 4. Build score screen/grading

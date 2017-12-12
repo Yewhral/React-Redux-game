@@ -13,8 +13,8 @@ const Preview = ({
     syrupColor,
     backOnClick,
 }) => {
-    const percentageAlcoholAmount = alcoholAmount/100;
-    const percentageSoftAmount = softAmount/100;
+    const percentageAlcoholAmount = alcoholAmount / 100;
+    const percentageSoftAmount = softAmount / 100;
     const syrupGradient = `linear-gradient(0deg, ${syrupColor} 50%, transparent)`;
     const alcoholStyle = {
         backgroundColor: alcoholColor,

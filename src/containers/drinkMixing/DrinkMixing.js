@@ -23,7 +23,7 @@ class DrinkMixing extends React.Component {
                 softDrink: false,
                 syrup: false,
             },
-            decorationsChecked: [
+            decorations: [
                 false,
                 false,
                 false,
@@ -130,17 +130,28 @@ class DrinkMixing extends React.Component {
     };
 
     toggleCheckbox = (index) => {
-        const { decorationsChecked } = this.state;
+        const { decorations } = this.state;
         this.setState(prevState => ({
-            decorationsChecked: {
-                ...prevState.decorationsChecked,
-                [index]: !decorationsChecked[index]
+            decorations: {
+                ...prevState.decorations,
+                [index]: !decorations[index]
             },
         }));
     };
 
+    renderedDecorations = (decorations, visibleDecors) => {
+        /*
+        for (let i = 0; i < decorations.length; i++){
+            if (visibleDecors[i]) {
+                console.log(decorations[i]);
+            }
+        }
+        */
+    };
+
     selectStep = (step) => {
-        const {canProceed, selectedAlcohol, selectedDrink, selectedSyrup, alcoholAmount, softAmount, decorationsChecked} = this.state;
+        const { canProceed, selectedAlcohol, selectedDrink, selectedSyrup, alcoholAmount, softAmount, decorations } = this.state;
+        const decors = ["olive", "straw", "palm", "lemon", "mint", "flame", "cherry", "??"];
         switch (step) {
             case 0:
                 return (
@@ -201,8 +212,9 @@ class DrinkMixing extends React.Component {
                         canProceed={true}
                         canBack={true}
                         onClick={this.toggleCheckbox}
-                        decorationsChecked={decorationsChecked}
-                        nextOnClick={() => this.handleStep(1)}
+                        decors={decors}
+                        decorationsCheck={decorations}
+                        nextOnClick={() => { this.handleStep(1); this.renderedDecorations(decors, decorations) }}
                         backOnClick={() => this.handleStep(-1)}
                     />
                 );
