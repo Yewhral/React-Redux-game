@@ -41,6 +41,42 @@
     height: 90px;
   }
 
+  .flame {
+    position: absolute;
+    width: 160px;
+    height: 100%;
+    right: 2px;
+    bottom: 65px;
+    background-image: url("../../images/flame.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .olives {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 8px;
+    bottom: 27px;
+    background-image: url("../../images/olives.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 5;
+    opacity: 0.6;
+  }
+
+  .lime {
+    position: absolute;
+    background-image: url("../../images/lime.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    left: 118px;
+    bottom: 167px;
+    z-index: 0;
+  }
+
 }
 
 .summaryContainer {
