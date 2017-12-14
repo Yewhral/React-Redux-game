@@ -141,13 +141,15 @@ class DrinkMixing extends React.Component {
 
     renderDecorations = (decorations, visibleDecors) => {
         const result = decorations.filter((decor,index) => visibleDecors[index] !== false);
-        console.log(result);
-        // TODO here map over result that will return <div class=result[index]></div>
+        return result.map((element) => (
+            <div className={element} key={element}></div>
+        ));
     };
 
     selectStep = (step) => {
         const { canProceed, selectedAlcohol, selectedDrink, selectedSyrup, alcoholAmount, softAmount, decorations } = this.state;
         const decors = ["olive", "straw", "palm", "lemon", "mint", "flame", "cherry", "??"];
+        const visualDecorations = this.renderDecorations(decors, decorations);
         switch (step) {
             case 0:
                 return (
@@ -210,7 +212,7 @@ class DrinkMixing extends React.Component {
                         onClick={this.toggleCheckbox}
                         decors={decors}
                         decorationsCheck={decorations}
-                        nextOnClick={() => { this.handleStep(1); this.renderDecorations(decors, decorations) }}
+                        nextOnClick={() =>  this.handleStep(1) }
                         backOnClick={() => this.handleStep(-1)}
                     />
                 );
@@ -223,6 +225,7 @@ class DrinkMixing extends React.Component {
                         alcoholColor={selectedAlcohol.color}
                         softAmount={softAmount}
                         softColor={selectedDrink.color}
+                        decorations={visualDecorations}
                         backOnClick={() => this.handleStep(-1)}
                     />
                 );

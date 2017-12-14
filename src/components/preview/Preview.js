@@ -6,6 +6,7 @@ import "./preview.css";
 
 const Preview = ({
     title,
+    decorations,
     alcoholAmount,
     alcoholColor,
     softAmount,
@@ -47,6 +48,7 @@ const Preview = ({
                     style={syrupStyle}
                 >
                 </div>
+                {decorations}
             </div>
             <NavigationLink
                 linkText = 'Serve your drink!'
