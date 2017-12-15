@@ -1,7 +1,7 @@
 const syrups = [
     {
         name: "Blue Curacao",
-        strong: 0,
+        power: 0,
         sweet: 5,
         crazy: 3,
         fancy: 1,
@@ -9,7 +9,7 @@ const syrups = [
     },
     {
         name: "Grenadine",
-        strong: 0,
+        power: 0,
         sweet: 4,
         crazy: 2,
         fancy: 1,
@@ -17,7 +17,7 @@ const syrups = [
     },
     {
         name: "Coco syrup",
-        strong: 0,
+        power: 0,
         sweet: 5,
         crazy: 1,
         fancy: 1,
@@ -25,7 +25,7 @@ const syrups = [
     },
     {
         name: "Mint syrup",
-        strong: 0,
+        power: 0,
         sweet: 2,
         crazy: 2,
         fancy: 1,
@@ -33,7 +33,7 @@ const syrups = [
     },
     {
         name: "none",
-        strong: 0,
+        power: 1,
         sweet: 0,
         crazy: 0,
         fancy: 0,
