@@ -32,7 +32,6 @@ const SyrupSelection = ({
     return (
         <div>
             <div className="syrupsContainer">
-                <div className="glass"></div>
                 <ScreenTitle title={title} />
                 <ul className="syrups">
                     {syrupList}
