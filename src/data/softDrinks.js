@@ -1,10 +1,3 @@
-import cola from '../images/cola.jpg';
-import milk from '../images/milk.jpg';
-import tonic from '../images/tonic.jpg';
-import orange from '../images/orange.jpg';
-import energy from '../images/energy.jpg';
-import tomato from '../images/tomato.jpg';
-
 const softDrink = [
     {
         name: "cola",
@@ -13,7 +6,7 @@ const softDrink = [
         crazy: 1,
         fancy: 1,
         color: '#080808',
-        image: cola
+        image: 'http://res.cloudinary.com/doethe/image/upload/v1513438343/cola_zygniy.jpg'
     },
     {
         name: "milk",
@@ -22,7 +15,7 @@ const softDrink = [
         crazy: 2,
         fancy: 0,
         color: '#fffcfe',
-        image: milk
+        image: 'http://res.cloudinary.com/doethe/image/upload/v1513438343/milk_aegksx.jpg'
     },
     {
         name: "tonic",
@@ -31,7 +24,7 @@ const softDrink = [
         crazy: 2,
         fancy: 1,
         color: 'transparent',
-        image: tonic
+        image: 'http://res.cloudinary.com/doethe/image/upload/v1513438342/tonic_b19zct.jpg'
     },
     {
         name: "orange juice",
@@ -40,7 +33,7 @@ const softDrink = [
         crazy: 1,
         fancy: 0,
         color: '#fead14',
-        image: orange
+        image: 'http://res.cloudinary.com/doethe/image/upload/v1513438344/orange_szpobg.jpg'
     },
     {
         name: "energy drink",
@@ -49,7 +42,7 @@ const softDrink = [
         crazy: 5,
         fancy: 0,
         color: '#f5f276',
-        image: energy
+        image: 'http://res.cloudinary.com/doethe/image/upload/v1513438343/energy_asdpni.jpg'
     },
     {
         name: "tomato juice",
@@ -58,7 +51,7 @@ const softDrink = [
         crazy: 3,
         fancy: 0,
         color: '#f82b1e',
-        image: tomato
+        image: 'http://res.cloudinary.com/doethe/image/upload/v1513438341/tomato_dlpqxk.jpg'
     }
 ];
 export default softDrink;

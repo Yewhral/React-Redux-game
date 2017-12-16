@@ -6,10 +6,6 @@ import NavigationLink from '../../components/navigationLink/NavigationLink';
 import { setGuest, setStrength, setSweetness, setCraziness, setFanciness, setPhoto, setGuestStep } from '../../redux/actions';
 import {setScrollOnTop} from '../../utils/utils';
 import guest from '../../data/guests';
-import Ariel from '../../images/Ariel.jpg';
-import Lucy from '../../images/Lucy.jpg';
-import Clark from '../../images/Clark.jpg';
-import Simon from '../../images/Simon.jpg';
 import './guestTiles.css'
 
 class GuestTiles extends React.Component {
@@ -40,22 +36,22 @@ class GuestTiles extends React.Component {
                     <ScreenTitle title="Who will be your guest?" />
                     <div className="guests-container">
                         <GuestTile
-                            guestPhoto={Lucy}
+                            guestPhoto={guest.Lucy.photo}
                             guestName="Lucy"
                             onClick={() => {this.guestSelection(guest.Lucy)}}
                         />
                         <GuestTile
-                            guestPhoto={Clark}
+                            guestPhoto={guest.Clark.photo}
                             guestName="Clark"
                             onClick={() => {this.guestSelection(guest.Clark)}}
                         />
                         <GuestTile
-                            guestPhoto={Simon}
+                            guestPhoto={guest.Simon.photo}
                             guestName="Simon"
                             onClick={() => {this.guestSelection(guest.Simon)}}
                         />
                         <GuestTile
-                            guestPhoto={Ariel}
+                            guestPhoto={guest.Ariel.photo}
                             guestName="Ariel"
                             onClick={() => {this.guestSelection(guest.Ariel)}}
                         />

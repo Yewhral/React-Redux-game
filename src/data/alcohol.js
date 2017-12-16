@@ -1,10 +1,3 @@
-import beer from '../images/beer.jpg';
-import vodka from '../images/vodka.jpg';
-import tequila from '../images/tequila.jpg';
-import whiskey from '../images/whiskey.jpg';
-import gin from '../images/gin.jpg';
-import rum from '../images/rum.jpg';
-
 const alcohol = [
     {
         name: "beer",
@@ -13,7 +6,7 @@ const alcohol = [
         crazy: 0,
         fancy: 0,
         color: '#fcb124',
-        image: beer
+        image: 'http://res.cloudinary.com/doethe/image/upload/v1513438342/beer_nregzl.jpg'
     },
     {
         name: "vodka",
@@ -22,7 +15,7 @@ const alcohol = [
         crazy: 5,
         fancy: 0,
         color: 'transparent',
-        image: vodka
+        image: 'http://res.cloudinary.com/doethe/image/upload/v1513438342/vodka_ld6uh3.jpg'
     },
     {
         name: "tequila",
@@ -31,7 +24,7 @@ const alcohol = [
         crazy: 3,
         fancy: 2,
         color: '#f4d0a4',
-        image: tequila
+        image: 'http://res.cloudinary.com/doethe/image/upload/v1513438344/tequila_qmhcmo.jpg'
     },
     {
         name: "whiskey",
@@ -40,7 +33,7 @@ const alcohol = [
         crazy: 2,
         fancy: 3,
         color: '#d29062',
-        image: whiskey
+        image: 'http://res.cloudinary.com/doethe/image/upload/v1513438342/whiskey_vhfqgw.jpg'
     },
     {
         name: "gin",
@@ -48,8 +41,8 @@ const alcohol = [
         sweet: 3,
         crazy: 3,
         fancy: 2,
-       color: '#d9dfcd',
-        image: gin
+        color: '#d9dfcd',
+        image: 'http://res.cloudinary.com/doethe/image/upload/v1513438343/gin_ws6och.jpg'
     },
     {
         name: "rum",
@@ -58,7 +51,7 @@ const alcohol = [
         crazy: 2,
         fancy: 3,
         color: '#9d702e',
-        image: rum
+        image: 'http://res.cloudinary.com/doethe/image/upload/v1513438345/rum_gavlin.jpg'
     }
 ];
 export default alcohol;

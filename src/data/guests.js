@@ -1,8 +1,3 @@
-import Ariel from '../images/Ariel.jpg';
-import Lucy from '../images/Lucy.jpg';
-import Clark from '../images/Clark.jpg';
-import Simon from '../images/Simon.jpg';
-
 const guest = {
     Lucy: {
         name: "Lucy",
@@ -10,7 +5,7 @@ const guest = {
         sweet: 3,
         crazy: 5,
         fancy: 2,
-        photo: Lucy
+        photo: 'http://res.cloudinary.com/doethe/image/upload/v1513438345/Lucy_jfghdj.jpg'
     },
     Clark: {
         name: "Clark",
@@ -18,7 +13,7 @@ const guest = {
         sweet: 2,
         crazy: 1,
         fancy: 2,
-        photo: Clark
+        photo: 'http://res.cloudinary.com/doethe/image/upload/v1513438342/Clark_fxddlh.jpg'
     },
     Simon: {
         name: "Simon",
@@ -26,7 +21,7 @@ const guest = {
         sweet: 3,
         crazy: 3,
         fancy: 1,
-        photo: Simon
+        photo: 'http://res.cloudinary.com/doethe/image/upload/v1513438344/Simon_vnisxn.jpg'
     },
     Ariel: {
         name: "Ariel",
@@ -34,8 +29,7 @@ const guest = {
         sweet: 3,
         crazy: 1,
         fancy: 2,
-        photo: Ariel
+        photo: 'http://res.cloudinary.com/doethe/image/upload/v1513438343/Ariel_tlp4v9.jpg'
     }
-
 };
 export default guest;
