@@ -3,7 +3,8 @@
 .guestDetails {
   margin: auto;
   width: 320px;
-  height: calc(100vh - 40px);
+  min-height: calc(100vh - 40px);
+  padding-bottom: 60px;
 
   img {
     margin-bottom: 10px;

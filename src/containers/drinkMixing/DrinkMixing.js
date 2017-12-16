@@ -1,14 +1,14 @@
 import React from 'react';
 import Drinks from '../../components/drinks/Drinks';
 import alcohol from '../../data/alcohol';
+import softDrinks from '../../data/softDrinks';
+import syrups from '../../data/syrups';
 import './drinkMixing.css'
 
 let SyrupSelection = null;
 let Proportions = null;
 let Decorations = null;
 let Preview = null;
-let softDrinks = null;
-let syrups = null;
 
 class DrinkMixing extends React.Component {
     constructor(props) {
@@ -45,8 +45,6 @@ class DrinkMixing extends React.Component {
             Proportions = require('../../components/proportions/Proportions').default;
             Decorations = require('../../components/decorations/Decorations').default;
             Preview = require('../../components/preview/Preview').default;
-            softDrinks = require('../../data/softDrinks').default;
-            syrups = require('../../data/syrups').default;
         });
     }
 
