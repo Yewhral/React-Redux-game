@@ -103,6 +103,43 @@
     transform: rotate(340deg);
   }
 
+  .straw {
+    position: absolute;
+    width: 149px;
+    height: 235px;
+    left: 53px;
+    bottom: 39px;
+    background-image: url("http://res.cloudinary.com/doethe/image/upload/v1513511329/straight-rope_xji8ao.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    transform: rotate(356deg);
+  }
+
+  .mint {
+    position: absolute;
+    width: 60px;
+    height: 131px;
+    right: 47px;
+    bottom: 55px;
+    background-image: url("http://res.cloudinary.com/doethe/image/upload/c_scale,w_128/v1513511336/mint_cfkpcr.svg");
+    background-size: contain;
+    z-index: 1;
+    transform: rotate(320deg);
+    opacity: 0.5;
+  }
+
+  .bubbles {
+    position: absolute;
+    width: 62px;
+    height: 143px;
+    left: 49px;
+    bottom: 24px;
+    background-image: url("http://res.cloudinary.com/doethe/image/upload/c_scale,h_27,w_10/v1513511329/bubbles_b2s2um.svg");
+    background-size: contain;
+    z-index: 0;
+  }
+
 }
 
 .summaryContainer {

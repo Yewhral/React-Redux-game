@@ -158,7 +158,7 @@ class DrinkMixing extends React.Component {
 
     selectStep = (step) => {
         const { canProceed, selectedAlcohol, selectedDrink, selectedSyrup, alcoholAmount, softAmount, decorations } = this.state;
-        const decors = ["olives", "straw", "palm", "lime", "mint", "flame", "ice", "umbrella"];
+        const decors = ["olives", "straw", "bubbles", "lime", "mint", "flame", "ice", "umbrella"];
         const visualDecorations = this.renderDecorations(decors, decorations);
         switch (step) {
             case 0:
