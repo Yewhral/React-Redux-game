@@ -7,8 +7,8 @@ For now - please don't mind me.
 I'm just playing with different solutions and checking things out here.
 
 Todo next:
-1. Apply visuals to remaining decorations,
-2. Unit tests for scoring functions
+1. Figure out scoring system, points and stats
+2. Add more Jest tests for scoring functions
 3. Build scoring mechanism
 4. Build score screen/grading
 5. Add responsivity
