@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Banner from '../components/banner/Banner';
+import ScoreScreen from '../containers/scoreScreen/ScoreScreen';
 import {setScrollOnTop} from '../utils/utils';
 
 class Results extends React.Component {
@@ -9,14 +10,16 @@ class Results extends React.Component {
     }
 
     render() {
+        const {created_drink} = this.props;
         return (
             <div className="game-wrapper">
                 <Banner/>
-                {this.props.created_drink.power}
-                {this.props.created_drink.fancy}
-                {this.props.created_drink.sweet}
-                {this.props.created_drink.crazy}
-                This will show results
+                <ScoreScreen
+                    drinkPower={created_drink.power}
+                    drinkSweet={created_drink.sweet}
+                    drinkCrazy={created_drink.crazy}
+                    drinkFancy={created_drink.fancy}
+                />
             </div>
         );
     };
