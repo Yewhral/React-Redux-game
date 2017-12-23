@@ -1,5 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { setDrink } from '../../redux/actions';
 import Drinks from '../../components/drinks/Drinks';
+import {calculateAllParameters} from '../../utils/scoring';
 import alcohol from '../../data/alcohol';
 import softDrinks from '../../data/softDrinks';
 import syrups from '../../data/syrups';
@@ -222,7 +225,10 @@ class DrinkMixing extends React.Component {
                         onClick={this.toggleCheckbox}
                         decors={decors}
                         decorationsCheck={decorations}
-                        nextOnClick={() =>  this.handleStep(1) }
+                        nextOnClick={() => {
+                            this.props.setDrink(calculateAllParameters(selectedAlcohol, alcoholAmount, selectedDrink, softAmount, selectedSyrup, decors.filter((decor,index) => this.state.decorations[index] !== false)));
+                            this.handleStep(1);
+                        }}
                         backOnClick={() => this.handleStep(-1)}
                     />
                 );
@@ -257,4 +263,9 @@ class DrinkMixing extends React.Component {
     }
 }
 
-export default DrinkMixing;
+const mapDispatchToProps = dispatch => ({
+    setDrink: (drink) => dispatch(setDrink(drink))
+});
+
+
+export default connect(null, mapDispatchToProps)(DrinkMixing);

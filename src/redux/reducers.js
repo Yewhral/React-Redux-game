@@ -8,7 +8,8 @@ export const initialState = {
     crazy: 0,
     fancy: 0,
     photo: null,
-    guest_step: 0
+    guest_step: 0,
+    created_drink: {},
 };
 
 export const rootReducer = (state = initialState, action) => {
@@ -22,11 +23,6 @@ export const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 guest_step: action.guest_step
-            };
-        case types.DRINK_STEP:
-            return {
-                ...state,
-                drink_step: action.drink_step
             };
         case types.STRONG:
             return {
@@ -52,6 +48,11 @@ export const rootReducer = (state = initialState, action) => {
             return {
                 ...state,
                 photo: action.photo
+            };
+        case types.CREATED_DRINK:
+            return {
+                ...state,
+                created_drink: action.created_drink
             };
         default:
             return state;
