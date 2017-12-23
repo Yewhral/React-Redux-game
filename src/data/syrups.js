@@ -3,7 +3,7 @@ const syrups = [
         name: "Blue Curacao",
         power: 5,
         sweet: 10,
-        crazy: 10,
+        crazy: 7,
         fancy: 2,
         color: "#0058c4"
     },
@@ -18,7 +18,7 @@ const syrups = [
     {
         name: "Coco syrup",
         power: 0,
-        sweet: 5,
+        sweet: 7,
         crazy: 5,
         fancy: 2,
         color: "#ececee"

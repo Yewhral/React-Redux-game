@@ -1,8 +1,8 @@
-export function calculateParameter (alcohol, alcoholAmount, softDrink, softDrinkAmount, syrup) {
+export function calculateParameter(alcohol, alcoholAmount, softDrink, softDrinkAmount, syrup) {
     return alcohol * alcoholAmount / 100 + softDrink * softDrinkAmount / 100 + syrup;
 }
 
-export function calculateFanciness (alcohol, softDrink, syrup, decorations) {
+export function calculateFanciness(alcohol, softDrink, syrup, decorations) {
     return ((alcohol + softDrink + syrup + decorations)*2/3).toFixed(2)/1;
 }
 
