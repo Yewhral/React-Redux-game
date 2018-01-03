@@ -1,38 +1,38 @@
 const comments = {
     Lucy: {
         strong: {
-            excessive : '',
-            redundant: '',
+            excessive : 'It\'s way too strong, ',
+            redundant: 'It\'s too strong, ',
             perfect: 'It\'s powerful, ',
-            insufficient: '',
-            deficient: ''
+            insufficient: 'It\'s not strong, ',
+            deficient: 'It\'s not strong at all, '
         },
         sweet: {
-            excessive : '',
-            redundant: '',
+            excessive : 'way too sweet, ',
+            redundant: 'too sweet, ',
             perfect: 'it\'s tasty, ',
-            insufficient: '',
-            deficient: ''
+            insufficient: 'not sweet enough, ',
+            deficient: 'not sweet at all, '
         },
         crazy: {
-            excessive : '',
-            redundant: '',
+            excessive : 'overly crazy and ',
+            redundant: 'slightly too crazy and ',
             perfect: 'freaking crazy and ',
-            insufficient: '',
-            deficient: ''
+            insufficient: 'not exciting and ',
+            deficient: 'dull and '
         },
         fancy: {
-            excessive : '',
-            redundant: '',
+            excessive : 'it had way too many decorations... ',
+            redundant: 'kinda too flashy? ',
             perfect: 'fancy! ',
-            insufficient: '',
-            deficient: ''
+            insufficient: 'I feel like it was not polished enough. ',
+            deficient: 'it had like no decorations at all! '
         }
     },
     Clark: {
         strong: {
             excessive : 'My drink was too strong, ',
-            redundant: 'My drink was slightly too strong',
+            redundant: 'My drink was slightly too strong, ',
             perfect: 'My drink was ideally strong, ',
             insufficient: 'My drink was weak, ',
             deficient: 'My drink was very weak, '
@@ -45,11 +45,11 @@ const comments = {
             deficient: 'not sweet at all, '
         },
         crazy: {
-            excessive : '  ',
+            excessive : '',
             redundant: 'too crazy and ',
             perfect: 'greatly balanced and ',
-            insufficient: '  ',
-            deficient: ' '
+            insufficient: '',
+            deficient: ''
         },
         fancy: {
             excessive : 'overcomplicated. ',
@@ -92,17 +92,17 @@ const comments = {
     Ariel: {
         strong: {
             excessive : 'Hey! It had like no alcohol at all!',
-            redundant: 'It could have been stronger',
+            redundant: 'It could have been stronger. ',
             perfect: 'It\'s strong enough. ',
             insufficient: 'A little too strong. ',
             deficient: 'I\'m sorry, but it was way too strong. '
         },
         sweet: {
-            excessive : '',
-            redundant: '',
+            excessive : 'It was too sweet even for my taste. ',
+            redundant: 'You could have used less sugar there. ',
             perfect: 'Anyway, it was perfectly sweet! ',
-            insufficient: '',
-            deficient: ''
+            insufficient: 'Don\'t be afraid to use more sugar next time. ',
+            deficient: 'Hmm...Why wasn\'t it sweet at all? '
         },
         crazy: {
             excessive : '',
