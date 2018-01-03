@@ -3,28 +3,28 @@ const comments = {
         strong: {
             excessive : '',
             redundant: '',
-            perfect: '',
+            perfect: 'It\'s powerful, ',
             insufficient: '',
             deficient: ''
         },
         sweet: {
             excessive : '',
             redundant: '',
-            perfect: '',
+            perfect: 'it\'s tasty, ',
             insufficient: '',
             deficient: ''
         },
         crazy: {
             excessive : '',
             redundant: '',
-            perfect: '',
+            perfect: 'freaking crazy and ',
             insufficient: '',
             deficient: ''
         },
         fancy: {
             excessive : '',
             redundant: '',
-            perfect: '',
+            perfect: 'fancy! ',
             insufficient: '',
             deficient: ''
         }
@@ -33,28 +33,28 @@ const comments = {
         strong: {
             excessive : '',
             redundant: '',
-            perfect: '',
+            perfect: 'Ideally strong, ',
             insufficient: '',
             deficient: ''
         },
         sweet: {
             excessive : '',
             redundant: '',
-            perfect: '',
+            perfect: 'rich in sweet flavours, ',
             insufficient: '',
             deficient: ''
         },
         crazy: {
             excessive : '',
             redundant: '',
-            perfect: '',
+            perfect: 'classy and ',
             insufficient: '',
             deficient: ''
         },
         fancy: {
             excessive : '',
             redundant: '',
-            perfect: '',
+            perfect: 'greatly balanced. ',
             insufficient: '',
             deficient: ''
         }
@@ -93,28 +93,28 @@ const comments = {
         strong: {
             excessive : '',
             redundant: '',
-            perfect: '',
+            perfect: 'It\'s strong enough, ',
             insufficient: '',
             deficient: ''
         },
         sweet: {
             excessive : '',
             redundant: '',
-            perfect: '',
+            perfect: 'perfectly sweet, ',
             insufficient: '',
             deficient: ''
         },
         crazy: {
             excessive : '',
             redundant: '',
-            perfect: '',
+            perfect: 'absolutely crazy and ',
             insufficient: '',
             deficient: ''
         },
         fancy: {
             excessive : '',
             redundant: '',
-            perfect: '',
+            perfect: 'it is soo fancy! ',
             insufficient: '',
             deficient: ''
         }
