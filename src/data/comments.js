@@ -38,13 +38,13 @@ const comments = {
             deficient: 'not sweet at all, '
         },
         crazy: {
-            excessive : '',
+            excessive : 'definitely too crazy and ',
             redundant: 'too crazy and ',
             perfect: 'greatly balanced and '
         },
         fancy: {
             excessive : 'overcomplicated. ',
-            redundant: '',
+            redundant: 'too complicated. ',
             perfect: 'classy. ',
             insufficient: 'not very elegant. ',
             deficient: 'poorly made. '
@@ -90,17 +90,17 @@ const comments = {
             deficient: 'Hmm...Why wasn\'t it sweet at all? '
         },
         crazy: {
-            excessive : '',
-            redundant: '',
+            excessive : 'I think you wanted to make it look crazy too much... ',
+            redundant: 'You went a little too wild on that one. ',
             perfect: 'It was absolutely crazy! ',
-            insufficient: '',
-            deficient: 'Sadly, it was dull.'
+            insufficient: 'You could\'ve experiment more, hehe. ',
+            deficient: 'Sadly, it was dull. '
         },
         fancy: {
-            redundant: '',
+            redundant: 'Maybe it had too many fancy things in it. ',
             perfect: 'It was soo fancy! ',
-            insufficient: '',
-            deficient: 'it had like no decorations at all! '
+            insufficient: 'Too bad it didn\'t have more decorations. ',
+            deficient: 'It had like no decorations at all! '
         }
     }
 };
