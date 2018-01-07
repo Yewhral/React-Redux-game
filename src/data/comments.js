@@ -45,7 +45,7 @@ const comments = {
         fancy: {
             excessive : 'overcomplicated. ',
             redundant: 'too complicated. ',
-            perfect: 'classy. ',
+            perfect: 'perfectly classy. ',
             insufficient: 'not very elegant. ',
             deficient: 'poorly made. '
         }
