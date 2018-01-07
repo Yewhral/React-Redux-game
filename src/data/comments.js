@@ -52,29 +52,29 @@ const comments = {
     },
     Simon: {
         strong: {
-            excessive : '',
-            redundant: '',
-            perfect: '',
-            insufficient: '',
-            deficient: ''
+            excessive : 'Oh man, that one was pure alcohol, ',
+            redundant: 'I didn\'t ask for something that powerful, it was ',
+            perfect: 'That was powerful, ',
+            insufficient: 'That was ',
+            deficient: 'I didn\'t feel any kick at all, '
         },
         sweet: {
             excessive : 'way too sweet, ',
-            redundant: '',
-            perfect: '',
-            insufficient: ''
+            redundant: 'a tad too sweet, ',
+            perfect: 'tasty, ',
+            insufficient: 'tasteless, '
         },
         crazy: {
-            redundant: '',
-            perfect: '',
-            insufficient: '',
-            deficient: ''
+            redundant: 'overboard crazy, ',
+            perfect: 'wicked, ',
+            insufficient: 'it ain\'t firecrackers, ' ,
+            deficient: 'I can\'t call it crazy, '
         },
         fancy: {
-            excessive : '',
-            redundant: '',
-            perfect: '',
-            insufficient: ''
+            excessive : 'and you went nuts with all that fancy stuff. ',
+            redundant: 'and it looks a bit goofy when you add too many decorations. ',
+            perfect: 'and totally awesome, man! ',
+            insufficient: 'and looked cheap. '
         }
     },
     Ariel: {
