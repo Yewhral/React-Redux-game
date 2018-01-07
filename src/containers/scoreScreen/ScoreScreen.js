@@ -55,11 +55,12 @@ class ScoreScreen extends React.Component {
                         <p>{commentInfo}</p>
                         <p className="comments">{commentary}</p>
                     </div>
+                    <NavigationLink
+                        linkText = 'Back to menu'
+                        destination = ''
+                    />
                 </div>
-                <NavigationLink
-                    linkText = 'Back to menu'
-                    destination = ''
-                />
+
             </div>
         );
     }
