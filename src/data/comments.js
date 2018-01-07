@@ -20,7 +20,7 @@ const comments = {
         },
         fancy: {
             excessive : 'it had way too many decorations... ',
-            redundant: 'kinda too flashy? ',
+            redundant: 'kinda... too flashy? ',
             perfect: 'it had nothing that wasn\'t needed, good job on that. '
         }
     },

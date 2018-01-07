@@ -11,7 +11,7 @@ class ScoreScreen extends React.Component {
         this.state = {};
     }
 
-    returnComment(guest, parameter, goal, score) {
+    calculateComment = (guest, parameter, goal, score) => {
         const scoreDifference = score - goal;
         const param = comments[guest][parameter];
         if (scoreDifference === 0){
@@ -25,15 +25,21 @@ class ScoreScreen extends React.Component {
         } else if (scoreDifference <= -2) {
             return param.deficient;
         }
+    };
+
+    comment() { // TODO refactor this
+        const {strong, sweet, crazy, fancy, guest, drinkPower, drinkSweet, drinkCrazy, drinkFancy} = this.props;
+        const strongComment = this.calculateComment(guest, 'strong', strong, drinkPower);
+        const sweetComment = this.calculateComment(guest, 'sweet', sweet, drinkSweet);
+        const crazyComment = this.calculateComment(guest, 'crazy', crazy, drinkCrazy);
+        const fancyComment = this.calculateComment(guest, 'fancy', fancy, drinkFancy);
+        return strongComment + sweetComment + crazyComment + fancyComment;
     }
 
     render() {
-        const {strong, sweet, crazy, fancy, photo, guest, drinkPower, drinkSweet, drinkCrazy, drinkFancy} = this.props;
-        const strongComment = this.returnComment(guest, 'strong', strong, drinkPower);
-        const sweetComment = this.returnComment(guest, 'sweet', sweet, drinkSweet);
-        const crazyComment = this.returnComment(guest, 'crazy', crazy, drinkCrazy);
-        const fancyComment = this.returnComment(guest, 'fancy', fancy, drinkFancy);
+        const {photo, guest} = this.props;
         const commentInfo = `${guest} commented your drink: `;
+        const commentary = this.comment();
         return (
             <div className="guestWrapper">
                 <div className="guestDetails">
@@ -44,13 +50,10 @@ class ScoreScreen extends React.Component {
                         guestPhoto={photo}
                         guestName={guest}
                     />
-
-                    <p>{commentInfo}</p>
-                    <p>{strongComment}</p>
-                    <p>{sweetComment}</p>
-                    <p>{crazyComment}</p>
-                    <p>{fancyComment}</p>
-
+                    <div className="commentary">
+                        <p>{commentInfo}</p>
+                        <p className="comments">{commentary}</p>
+                    </div>
                 </div>
             </div>
         );
