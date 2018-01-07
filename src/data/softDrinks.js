@@ -23,7 +23,7 @@ const softDrink = [
         sweet: 0,
         crazy: 3,
         fancy: 10,
-        color: 'transparent',
+        color: 'rgba(255,255,255,0.2)',
         image: 'http://res.cloudinary.com/doethe/image/upload/v1513438342/tonic_b19zct.jpg'
     },
     {

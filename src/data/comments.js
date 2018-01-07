@@ -56,7 +56,7 @@ const comments = {
             redundant: 'I didn\'t ask for something that powerful, it was ',
             perfect: 'That was powerful, ',
             insufficient: 'That was ',
-            deficient: 'I didn\'t feel any kick at all, '
+            deficient: 'I didn\'t feel any kick at all, it was '
         },
         sweet: {
             excessive : 'way too sweet, ',

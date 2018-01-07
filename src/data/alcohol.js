@@ -14,7 +14,7 @@ const alcohol = [
         sweet: 0,
         crazy: 10,
         fancy: 0,
-        color: 'transparent',
+        color: 'rgba(255,255,255,0.1)',
         image: 'http://res.cloudinary.com/doethe/image/upload/v1513438342/vodka_ld6uh3.jpg'
     },
     {

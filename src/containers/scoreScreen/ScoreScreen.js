@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ScreenTitle from '../../components/screenTitle/ScreenTitle';
 import GuestPic from '../../components/guestPic/GuestPic';
+import NavigationLink from '../../components/navigationLink/NavigationLink';
 import comments from '../../data/comments';
 import './scoreScreen.css'
 
@@ -55,6 +56,10 @@ class ScoreScreen extends React.Component {
                         <p className="comments">{commentary}</p>
                     </div>
                 </div>
+                <NavigationLink
+                    linkText = 'Back to menu'
+                    destination = ''
+                />
             </div>
         );
     }
