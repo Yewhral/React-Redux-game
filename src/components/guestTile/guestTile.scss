@@ -1,5 +1,12 @@
 @import '../../styles/variables.scss';
 
+.guestTile {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+
 img {
   width: 120px;
   height: 100px;
@@ -16,10 +23,10 @@ img {
   color: $white1;
   background: $transBlack2;
   font-size: 14px;
-  line-height: 20px;
   text-align: center;
   padding: 0;
   margin: 0;
-  position: relative;
-  bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -13,6 +13,8 @@
 
     .bottle, .selected {
       cursor: pointer;
+      display: flex;
+      flex-direction: column;
     }
 
     .bottle {
@@ -31,15 +33,14 @@
     }
 
     .label {
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background: $transBlack1;
       color: $white1;
       font-size: 9px;
       font-weight: bold;
-      position: relative;
-      bottom: 4px;
       height: 21px;
-      line-height: 21px;
     }
   }
 

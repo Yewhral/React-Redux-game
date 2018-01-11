@@ -9,6 +9,7 @@ const GuestTile = ({
 }) => {
     return (
         <div
+            className="guestTile"
             onClick={onClick}
         >
             <img
