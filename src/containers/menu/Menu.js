@@ -5,19 +5,23 @@ import './menu.css';
 class Menu extends React.Component {
     render() {
         return (
-            <div className="menu-container">
-                <NavigationLink
-                    linkText = 'Start the game'
-                    destination = 'guests'
-                />
-                <NavigationLink
-                    linkText = 'How to play'
-                    destination = 'help'
-                />
-                <NavigationLink
-                    linkText = 'Credits'
-                    destination = 'credits'
-                />
+            <div className="menuWrapper">
+                <div className="leftColumn"></div>
+                <div className="menuContainer">
+                    <NavigationLink
+                        linkText = 'Start the game'
+                        destination = 'guests'
+                    />
+                    <NavigationLink
+                        linkText = 'How to play'
+                        destination = 'help'
+                    />
+                    <NavigationLink
+                        linkText = 'Credits'
+                        destination = 'credits'
+                    />
+                </div>
+                <div className="rightColumn"></div>
             </div>
         );
     }
