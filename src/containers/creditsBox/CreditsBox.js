@@ -8,17 +8,21 @@ class CreditsBox extends React.Component {
         const creditsText = 'This is a mini-game that I created to better understand React combined with Redux. ' +
             'Additionally I am trying mobile-first approach and this happened to be the most challenging part of the project.';
         return (
-            <div className="credits-container">
-                <div className="credits">
-                    <TextBox
-                        title = 'About the game'
-                        text = {creditsText}
-                    />
-                    <NavigationLink
-                        linkText = 'Back to menu'
-                        destination = ''
-                    />
+            <div className="creditsWrapper">
+                <div className="leftDecor"></div>
+                <div className="creditsContainer">
+                    <div className="credits">
+                        <TextBox
+                            title = 'About the game'
+                            text = {creditsText}
+                        />
+                        <NavigationLink
+                            linkText = 'Back to menu'
+                            destination = ''
+                        />
+                    </div>
                 </div>
+                <div className="rightDecor"></div>
             </div>
         );
     }

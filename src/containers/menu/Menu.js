@@ -6,7 +6,7 @@ class Menu extends React.Component {
     render() {
         return (
             <div className="menuWrapper">
-                <div className="leftColumn"></div>
+                <div className="leftDecor"></div>
                 <div className="menuContainer">
                     <NavigationLink
                         linkText = 'Start the game'
@@ -21,7 +21,7 @@ class Menu extends React.Component {
                         destination = 'credits'
                     />
                 </div>
-                <div className="rightColumn"></div>
+                <div className="rightDecor"></div>
             </div>
         );
     }

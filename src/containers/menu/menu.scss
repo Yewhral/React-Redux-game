@@ -16,7 +16,8 @@
   }
 }
 
-.rightColumn, .leftColumn {
+.rightDecor,
+.leftDecor {
   display: none;
 }
 
@@ -30,19 +31,21 @@
 }
 
 @media only screen and (min-width:960px) {
-  .leftColumn {
+  .leftDecor {
     display: block;
     width: 20%;
     background-color: transparentize($brown1, 0.2);
   }
 
-  .rightColumn {
+  .rightDecor {
     display: block;
     width: 20%;
     background-color: transparentize($brown1, 0.2);
   }
 
-  .menuContainer {
+  .menuContainer,
+  .creditsContainer {
     width: 60%;
   }
+
 }

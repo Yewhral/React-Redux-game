@@ -9,17 +9,21 @@ class HelpBox extends React.Component {
             'Invite a guest, check his preferences and mix something truly awesome for him! ' +
             'When your guest finishes drinking he will rate what you prepared so be careful! ';
         return (
-            <div className="credits-container">
-                <div className="credits">
-                <TextBox
-                    title = 'How to play the game'
-                    text = {helpText}
-                />
-                <NavigationLink
-                    linkText = 'Back to menu'
-                    destination = ''
-                />
+            <div className="creditsWrapper">
+                <div className="leftDecor"></div>
+                <div className="creditsContainer">
+                    <div className="credits">
+                    <TextBox
+                        title = 'How to play the game'
+                        text = {helpText}
+                    />
+                    <NavigationLink
+                        linkText = 'Back to menu'
+                        destination = ''
+                    />
+                    </div>
                 </div>
+                <div className="rightDecor"></div>
             </div>
         );
     }

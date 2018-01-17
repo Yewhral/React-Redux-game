@@ -1,6 +1,10 @@
 @import '../../styles/variables.scss';
 
-.credits-container {
+.creditsWrapper {
+  display: flex;
+}
+
+.creditsContainer {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -13,7 +17,7 @@
   .credits {
     width: 320px;
     box-sizing: border-box;
-    padding: 40px 30px 40px 30px;
-    margin: auto;
+    padding: 40px 30px;
+    margin: 0 auto;
   }
 }

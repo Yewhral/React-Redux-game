@@ -30,7 +30,7 @@ class Guests extends React.Component {
         let chosenStep;
         chosenStep = this.selectStep(this.props.guest_step);
         return (
-            <div className="game-wrapper">
+            <div className="gameWrapper">
                 <Banner/>
                 {chosenStep}
             </div>

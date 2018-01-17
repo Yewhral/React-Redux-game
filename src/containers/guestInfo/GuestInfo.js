@@ -25,6 +25,7 @@ class GuestInfo extends React.Component {
         const {strong, sweet, crazy, fancy, photo, guest, setGuestStep} = this.props;
         return (
             <div className="guestWrapper">
+                <div className="leftDecor"></div>
                 <div className="guestDetails">
                     <ScreenTitle
                         title="Who will be your guest?"
@@ -48,6 +49,7 @@ class GuestInfo extends React.Component {
                         onClick={() => { setGuestStep(0); }}
                     />
                 </div>
+                <div className="rightDecor"></div>
             </div>
         );
     }

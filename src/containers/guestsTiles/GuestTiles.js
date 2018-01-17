@@ -32,6 +32,7 @@ class GuestTiles extends React.Component {
     render() {
         return (
             <div className="guestWrapper">
+                <div className="leftDecor"></div>
                 <div className="grid-positioning">
                     <ScreenTitle title="Who will be your guest?" />
                     <div className="guests-container">
@@ -61,6 +62,7 @@ class GuestTiles extends React.Component {
                         destination = ''
                     />
                 </div>
+                <div className="rightDecor"></div>
             </div>
         );
     }
