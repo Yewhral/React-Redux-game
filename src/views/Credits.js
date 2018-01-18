@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../components/banner/Banner';
 import CreditsBox from '../containers/creditsBox/CreditsBox'
-import {setScrollOnTop} from '../utils/utils';
+import { setScrollOnTop } from '../utils/utils';
 
 class Credits extends React.Component {
     componentDidMount() {

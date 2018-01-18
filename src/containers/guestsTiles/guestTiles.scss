@@ -7,7 +7,7 @@
   display: flex;
 }
 
-.grid-positioning {
+.gridPositioning {
   margin: 0 auto;
   width: 320px;
   padding-bottom: 60px;
@@ -16,7 +16,7 @@
     text-decoration: none;
   }
 
-  .guests-container {
+  .guestsContainer {
     box-sizing: border-box;
     display: grid;
     grid-template-rows: 120px 120px;
@@ -35,10 +35,10 @@
 
 
 @media only screen and (min-width:960px){
-  .grid-positioning {
+  .gridPositioning {
     width: 380px;
 
-    .guests-container {
+    .guestsContainer {
       grid-template-rows: 140px 140px;
       grid-template-columns: 180px 180px;
       padding: 0 0 40px 0;

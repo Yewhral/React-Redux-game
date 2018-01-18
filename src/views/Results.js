@@ -12,7 +12,7 @@ class Results extends React.Component {
     render() {
         const {created_drink} = this.props;
         return (
-            <div className="game-wrapper">
+            <div className="gameWrapper">
                 <Banner/>
                 <ScoreScreen
                     drinkPower={created_drink.power}

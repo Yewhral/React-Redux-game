@@ -10,12 +10,12 @@ Bundler: Webpack
 Unit tests: Jest
 
 Todo next:
-1. Add responsivity
+1. Add responsivity, and fix CSS naming convention while at it
+2. Add statistics that will be easier to read
 2. Add some kind of a preloader for images
 3. Add credit where it's due
 
 Todo a little later
 1. Refactor navigation and ingredient selection
-2. Consider adding stats screen
 2. Consider adding propTypes
 3. Consider adding translations

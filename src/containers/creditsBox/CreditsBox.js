@@ -1,7 +1,7 @@
 import React from 'react';
 import NavigationLink from '../../components/navigationLink/NavigationLink';
 import TextBox from '../../components/textBox/TextBox';
-import "./creditsBox.css";
+import './creditsBox.css';
 
 class CreditsBox extends React.Component {
     render() {

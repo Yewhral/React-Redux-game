@@ -4,8 +4,8 @@ import "./textBox.css";
 
 const TextBox = ({title, text}) => {
     return (
-        <div className="text-box">
-            <div className="box-title">
+        <div className="textBox">
+            <div className="boxTitle">
                 {title}
             </div>
             <div>

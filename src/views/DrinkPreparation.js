@@ -10,7 +10,7 @@ class DrinkPreparation extends React.Component {
 
     render() {
         return (
-            <div className="game-wrapper">
+            <div className="gameWrapper">
                 <Banner/>
                 <DrinkMixing/>
             </div>

@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import GuestTiles from '../containers/guestsTiles/GuestTiles';
 import GuestInfo from '../containers/guestInfo/GuestInfo';
 import Banner from '../components/banner/Banner';
-import {setGuestStep } from '../redux/actions';
-import {setScrollOnTop} from '../utils/utils';
+import { setGuestStep } from '../redux/actions';
+import { setScrollOnTop } from '../utils/utils';
 
 class Guests extends React.Component {
     componentDidMount() {

@@ -33,9 +33,9 @@ class GuestTiles extends React.Component {
         return (
             <div className="guestWrapper">
                 <div className="leftDecor"></div>
-                <div className="grid-positioning">
+                <div className="gridPositioning">
                     <ScreenTitle title="Who will be your guest?" />
-                    <div className="guests-container">
+                    <div className="guestsContainer">
                         <GuestTile
                             guestPhoto={guest.Lucy.photo}
                             guestName="Lucy"

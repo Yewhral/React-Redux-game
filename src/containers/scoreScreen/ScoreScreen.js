@@ -43,6 +43,7 @@ class ScoreScreen extends React.Component {
         const commentary = this.comment();
         return (
             <div className="guestWrapper">
+                <div className="leftDecor"></div>
                 <div className="guestDetails">
                     <ScreenTitle
                         title="Results!"
@@ -60,7 +61,7 @@ class ScoreScreen extends React.Component {
                         destination = ''
                     />
                 </div>
-
+                <div className="rightDecor"></div>
             </div>
         );
     }
