@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import "./textBox.css";
+import './textBox.css';
 
 const TextBox = ({title, text}) => {
     return (

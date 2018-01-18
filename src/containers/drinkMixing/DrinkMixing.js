@@ -255,9 +255,11 @@ class DrinkMixing extends React.Component {
         const chosenStep = this.selectStep(currentStep);
         return (
             <div className="barWrapper">
+                <div className="leftDecor"></div>
                 <div className="barContainer">
                     {chosenStep}
                 </div>
+                <div className="rightDecor"></div>
             </div>
         );
     }
