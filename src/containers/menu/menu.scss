@@ -37,7 +37,7 @@
 
     &:before {
       content: '';
-      background-image: linear-gradient(to right, $brown2, $brown2 7.145%, $brown1 7.145%, $brown1 35.7%, $brown2 35.7%, $brown2 50%, $brown1 50%, $brown1 64.3%, $brown2 64.3%, $brown2 92.8%, $brown1 92.8%, $brown1);
+      background-image: linear-gradient(to right, $brown1, $brown1 14.2%, $brown2 21.3%, $brown2 21.3%, $brown1 21.3%, $brown1 35.7%, $brown2 35.7%, $brown2 50%, $brown1 50%, $brown1 64.3%, $brown2 64.3%, $brown2 92.8%, $brown1 92.8%, $brown1);
       position: absolute;
       right: 0;
       top: 0;
@@ -47,7 +47,7 @@
   }
 
   .rightDecor:before {
-    background-image: linear-gradient(to left, $brown2, $brown2 7.145%, $brown1 7.145%, $brown1 35.7%, $brown2 35.7%, $brown2 50%, $brown1 50%, $brown1 64.3%, $brown2 64.3%, $brown2 92.8%, $brown1 92.8%, $brown1);
+    background-image: linear-gradient(to left, $brown1, $brown1 14.2%, $brown2 21.3%, $brown2 21.3%, $brown1 21.3%, $brown1 35.7%, $brown2 35.7%, $brown2 50%, $brown1 50%, $brown1 64.3%, $brown2 64.3%, $brown2 92.8%, $brown1 92.8%, $brown1);
     left: 0;
   }
 
