@@ -10,7 +10,7 @@ class CreditsBox extends React.Component {
         return (
             <div className="creditsWrapper">
                 <div className="leftDecor"></div>
-                <div className="creditsContainer">
+                <main className="creditsContainer">
                     <div className="credits">
                         <TextBox
                             title = 'About the game'
@@ -21,7 +21,7 @@ class CreditsBox extends React.Component {
                             destination = ''
                         />
                     </div>
-                </div>
+                </main>
                 <div className="rightDecor"></div>
             </div>
         );

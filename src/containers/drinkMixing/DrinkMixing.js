@@ -256,9 +256,9 @@ class DrinkMixing extends React.Component {
         return (
             <div className="barWrapper">
                 <div className="leftDecor"></div>
-                <div className="barContainer">
+                <main className="barContainer">
                     {chosenStep}
-                </div>
+                </main>
                 <div className="rightDecor"></div>
             </div>
         );

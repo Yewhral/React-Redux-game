@@ -24,7 +24,7 @@ class GuestInfo extends React.Component {
     render() {
         const {strong, sweet, crazy, fancy, photo, guest, setGuestStep} = this.props;
         return (
-            <div className="guestWrapper">
+            <main className="guestWrapper">
                 <div className="leftDecor"></div>
                 <div className="guestDetails">
                     <ScreenTitle
@@ -50,7 +50,7 @@ class GuestInfo extends React.Component {
                     />
                 </div>
                 <div className="rightDecor"></div>
-            </div>
+            </main>
         );
     }
 }

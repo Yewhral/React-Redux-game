@@ -11,7 +11,7 @@ class HelpBox extends React.Component {
         return (
             <div className="creditsWrapper">
                 <div className="leftDecor"></div>
-                <div className="creditsContainer">
+                <main className="creditsContainer">
                     <div className="credits">
                     <TextBox
                         title = 'How to play the game'
@@ -22,7 +22,7 @@ class HelpBox extends React.Component {
                         destination = ''
                     />
                     </div>
-                </div>
+                </main>
                 <div className="rightDecor"></div>
             </div>
         );

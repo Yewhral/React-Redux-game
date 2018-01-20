@@ -44,7 +44,7 @@ class ScoreScreen extends React.Component {
         return (
             <div className="guestWrapper">
                 <div className="leftDecor"></div>
-                <div className="guestDetails">
+                <main className="guestDetails">
                     <ScreenTitle
                         title="Results!"
                     />
@@ -60,7 +60,7 @@ class ScoreScreen extends React.Component {
                         linkText = 'Back to menu'
                         destination = ''
                     />
-                </div>
+                </main>
                 <div className="rightDecor"></div>
             </div>
         );
