@@ -28,16 +28,27 @@
 }
 
 @media only screen and (min-width:960px) {
-  .leftDecor {
+  .leftDecor, .rightDecor {
     display: block;
     width: 20%;
-    background-color: transparentize($brown1, 0.2);
+    background-color: $brown1;
+    position: relative;
+    box-sizing: border-box;
+
+    &:before {
+      content: '';
+      background-image: linear-gradient(to right, $brown2, $brown2 7.145%, $brown1 7.145%, $brown1 35.7%, $brown2 35.7%, $brown2 50%, $brown1 50%, $brown1 64.3%, $brown2 64.3%, $brown2 92.8%, $brown1 92.8%, $brown1);
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100px;
+      height: 100%;
+    }
   }
 
-  .rightDecor {
-    display: block;
-    width: 20%;
-    background-color: transparentize($brown1, 0.2);
+  .rightDecor:before {
+    background-image: linear-gradient(to left, $brown2, $brown2 7.145%, $brown1 7.145%, $brown1 35.7%, $brown2 35.7%, $brown2 50%, $brown1 50%, $brown1 64.3%, $brown2 64.3%, $brown2 92.8%, $brown1 92.8%, $brown1);
+    left: 0;
   }
 
   .menuContainer,
