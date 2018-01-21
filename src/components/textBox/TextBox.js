@@ -4,14 +4,14 @@ import './textBox.css';
 
 const TextBox = ({title, text}) => {
     return (
-        <div className="textBox">
+        <section className="textBox">
             <div className="boxTitle">
                 {title}
             </div>
             <div>
                 {text}
             </div>
-         </div>
+         </section>
     );
 };
 

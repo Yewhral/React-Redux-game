@@ -12,8 +12,7 @@ Unit tests: Jest
 Todo next:
 1. Add responsivity, and fix CSS naming convention while at it
 2. Add statistics that will be easier to read
-2. Add some kind of a preloader for images
-3. Add credit where it's due
+3. Add some kind of a preloader for images
 
 Todo a little later
 1. Refactor navigation and ingredient selection

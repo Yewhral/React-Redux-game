@@ -1,0 +1,18 @@
+@import '../../styles/variables.scss';
+
+.resources {
+  padding-left: 20px;
+}
+
+.credit {
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+
+.creditsLink {
+  text-decoration: none;
+  color: white;
+  &:hover {
+    color: $brown4;
+  }
+}
