@@ -9,12 +9,30 @@ import './scoreScreen.css'
 class ScoreScreen extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            strongScore: '',
+            sweetScore: '',
+            crazyScore: '',
+            fancyScore: '',
+        };
     }
 
-    calculateComment = (parameter, goal, score) => {
+    componentWillMount() { // TODO refactor this
+        const {strong, sweet, crazy, fancy, drinkPower, drinkSweet, drinkCrazy, drinkFancy} = this.props;
+        this.setState({
+            strongScore: this.calculateStat(drinkPower, strong),
+            sweetScore: this.calculateStat(drinkSweet, sweet),
+            crazyScore: this.calculateStat(drinkCrazy, crazy),
+            fancyScore: this.calculateStat(drinkFancy, fancy),
+        });
+    };
+
+    calculateStat = (score, goal) => {
+        return score - goal;
+    };
+
+    calculateComment = (parameter, scoreDifference) => {
         const { guest } = this.props;
-        const scoreDifference = score - goal;
         const param = comments[guest][parameter];
         if (scoreDifference === 0){
             return param.perfect;
@@ -30,11 +48,11 @@ class ScoreScreen extends React.Component {
     };
 
     comment() { // TODO refactor this
-        const {strong, sweet, crazy, fancy, drinkPower, drinkSweet, drinkCrazy, drinkFancy} = this.props;
-        const strongComment = this.calculateComment('strong', strong, drinkPower);
-        const sweetComment = this.calculateComment('sweet', sweet, drinkSweet);
-        const crazyComment = this.calculateComment('crazy', crazy, drinkCrazy);
-        const fancyComment = this.calculateComment('fancy', fancy, drinkFancy);
+        const {strongScore, sweetScore, crazyScore, fancyScore} = this.state;
+        const strongComment = this.calculateComment('strong', strongScore);
+        const sweetComment = this.calculateComment('sweet', sweetScore);
+        const crazyComment = this.calculateComment('crazy', crazyScore);
+        const fancyComment = this.calculateComment('fancy', fancyScore);
         return strongComment + sweetComment + crazyComment + fancyComment;
     }
 
