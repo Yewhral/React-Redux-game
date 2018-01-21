@@ -17,7 +17,10 @@ const TextBox = ({title, text}) => {
 
 TextBox.propTypes = {
     title: PropTypes.string,
-    text: PropTypes.string
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object,
+        ]),
 };
 
 TextBox.defaultProps = {

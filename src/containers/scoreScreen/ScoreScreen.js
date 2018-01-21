@@ -12,7 +12,8 @@ class ScoreScreen extends React.Component {
         this.state = {};
     }
 
-    calculateComment = (guest, parameter, goal, score) => {
+    calculateComment = (parameter, goal, score) => {
+        const { guest } = this.props;
         const scoreDifference = score - goal;
         const param = comments[guest][parameter];
         if (scoreDifference === 0){
@@ -29,11 +30,11 @@ class ScoreScreen extends React.Component {
     };
 
     comment() { // TODO refactor this
-        const {strong, sweet, crazy, fancy, guest, drinkPower, drinkSweet, drinkCrazy, drinkFancy} = this.props;
-        const strongComment = this.calculateComment(guest, 'strong', strong, drinkPower);
-        const sweetComment = this.calculateComment(guest, 'sweet', sweet, drinkSweet);
-        const crazyComment = this.calculateComment(guest, 'crazy', crazy, drinkCrazy);
-        const fancyComment = this.calculateComment(guest, 'fancy', fancy, drinkFancy);
+        const {strong, sweet, crazy, fancy, drinkPower, drinkSweet, drinkCrazy, drinkFancy} = this.props;
+        const strongComment = this.calculateComment('strong', strong, drinkPower);
+        const sweetComment = this.calculateComment('sweet', sweet, drinkSweet);
+        const crazyComment = this.calculateComment('crazy', crazy, drinkCrazy);
+        const fancyComment = this.calculateComment('fancy', fancy, drinkFancy);
         return strongComment + sweetComment + crazyComment + fancyComment;
     }
 
