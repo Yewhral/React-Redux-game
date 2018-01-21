@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { setDrink } from '../../redux/actions';
 import Drinks from '../../components/drinks/Drinks';
-import {calculateAllParameters} from '../../utils/scoring';
+import { calculateAllParameters } from '../../utils/scoring';
+import { setScrollOnTop } from '../../utils/utils';
 import alcohol from '../../data/alcohol';
 import softDrinks from '../../data/softDrinks';
 import syrups from '../../data/syrups';
@@ -74,6 +75,7 @@ class DrinkMixing extends React.Component {
     handleStep = (value) => {
         const {currentStep} = this.state;
         const newStep = currentStep + value;
+        setScrollOnTop();
         this.setState({
             currentStep: newStep,
         });

@@ -5,6 +5,7 @@ import NavigationButton from '../../components/navigationButton/NavigationButton
 import ScreenTitle from '../../components/screenTitle/ScreenTitle';
 import GuestPic from '../../components/guestPic/GuestPic';
 import GuestStats from '../../components/guestStats/GuestStats';
+import { setScrollOnTop } from '../../utils/utils';
 import { setGuestStep } from '../../redux/actions';
 import './guestInfo.css'
 
@@ -46,7 +47,7 @@ class GuestInfo extends React.Component {
                     />
                     <NavigationButton
                         buttonText = 'Go back'
-                        onClick={() => { setGuestStep(0); }}
+                        onClick={() => { setGuestStep(0); setScrollOnTop(); }}
                     />
                 </div>
                 <div className="rightDecor"></div>

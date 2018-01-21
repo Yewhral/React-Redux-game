@@ -4,7 +4,7 @@ import GuestTile from '../../components/guestTile/GuestTile';
 import ScreenTitle from '../../components/screenTitle/ScreenTitle';
 import NavigationLink from '../../components/navigationLink/NavigationLink';
 import { setGuest, setStrength, setSweetness, setCraziness, setFanciness, setPhoto, setGuestStep } from '../../redux/actions';
-import {setScrollOnTop} from '../../utils/utils';
+import { setScrollOnTop } from '../../utils/utils';
 import guest from '../../data/guests';
 import './guestTiles.css'
 
@@ -14,7 +14,7 @@ class GuestTiles extends React.Component {
         this.state = {}
     }
 
-    componentWillUpdate() {
+    componentWillMount() {
         setScrollOnTop();
     }
 
@@ -26,6 +26,7 @@ class GuestTiles extends React.Component {
         setCraziness(guest.crazy);
         setFanciness(guest.fancy);
         setPhoto(guest.photo);
+        setScrollOnTop();
         setGuestStep(1);
     };
 

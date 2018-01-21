@@ -20,7 +20,7 @@ TextBox.propTypes = {
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.object,
-        ]),
+    ]),
 };
 
 TextBox.defaultProps = {
