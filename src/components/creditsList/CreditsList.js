@@ -1,13 +1,10 @@
 import React from 'react';
 import './creditsList.css'
 
-const CreditsList = ({
-    source
-}) => {
-    const link = `http://${source}`;
+export default function CreditsList() {
     return (
         <div>
-            From <a href={link} title="Flaticon" className="creditsLink">{source}</a>
+            From <a href="http://www.flaticon.com" title="Flaticon" className="creditsLink">www.flaticon.com</a>
             <ul className="resources">
                 <li className="credit">Lime.svg by <a href="http://www.freepik.com" title="Freepik" className="creditsLink">Freepik</a></li>
                 <li className="credit">Lemon.svg by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" className="creditsLink">Smashicons</a></li>
@@ -17,5 +14,3 @@ const CreditsList = ({
         </div>
     );
 };
-
-export default CreditsList;

@@ -6,8 +6,13 @@ import './creditsBox.css';
 
 class CreditsBox extends React.Component {
     render() {
-        const creditsText = 'This is a mini-game that I created to better understand React combined with Redux. ' +
-            'Additionally I am trying mobile-first approach and this happened to be the most challenging part of the project.';
+        const creditsText = (
+            <div>
+                <p>This is a mini-game that I created to better understand React combined with Redux.</p>
+                <p>Additionally I am trying mobile-first approach and this happened to be the most challenging part of the project.</p>
+                <p>For simple unit testing I picked Jest.</p>
+            </div>
+        );
         return (
             <div className="creditsWrapper">
                 <div className="leftDecor"></div>
@@ -19,7 +24,7 @@ class CreditsBox extends React.Component {
                         />
                         <TextBox
                             title = 'Resources'
-                            text = {<CreditsList source='www.flaticon.com'/>}
+                            text = {<CreditsList />}
                         />
                         <NavigationLink
                             linkText = 'Back to menu'
