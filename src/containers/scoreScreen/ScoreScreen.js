@@ -6,6 +6,8 @@ import NavigationLink from '../../components/navigationLink/NavigationLink';
 import comments from '../../data/comments';
 import './scoreScreen.css'
 
+// TODO refactor this whole container as it's full of repeating code
+
 class ScoreScreen extends React.Component {
     constructor(props) {
         super(props);
@@ -17,7 +19,7 @@ class ScoreScreen extends React.Component {
         };
     }
 
-    componentWillMount() { // TODO refactor this
+    componentWillMount() {
         const {strong, sweet, crazy, fancy, drinkPower, drinkSweet, drinkCrazy, drinkFancy} = this.props;
         this.setState({
             strongScore: this.calculateStat(drinkPower, strong),
@@ -34,7 +36,7 @@ class ScoreScreen extends React.Component {
     calculateComment = (parameter, scoreDifference) => {
         const { guest } = this.props;
         const param = comments[guest][parameter];
-        if (scoreDifference === 0){
+        if (scoreDifference === 0) {
             return param.perfect;
         } else if (scoreDifference === 1) {
             return param.redundant;
@@ -47,7 +49,24 @@ class ScoreScreen extends React.Component {
         }
     };
 
-    comment() { // TODO refactor this
+    calculateDifference = (scoreDifference) => {
+        switch (true) {
+            case (scoreDifference === 0):
+                return "perfect!";
+            case (scoreDifference === 1):
+                return "too much";
+            case (scoreDifference >= 2):
+                return "way too much";
+            case (scoreDifference === -1):
+                return "too little";
+            case (scoreDifference <= -2):
+                return 'way too little';
+            default:
+                break;
+        }
+    };
+
+    comment() {
         const {strongScore, sweetScore, crazyScore, fancyScore} = this.state;
         const strongComment = this.calculateComment('strong', strongScore);
         const sweetComment = this.calculateComment('sweet', sweetScore);
@@ -58,8 +77,8 @@ class ScoreScreen extends React.Component {
 
     render() {
         const {photo, guest} = this.props;
+        const {strongScore, sweetScore, fancyScore, crazyScore} = this.state;
         const commentInfo = `${guest} commented your drink: `;
-        const commentary = this.comment();
         return (
             <div className="guestWrapper">
                 <div className="leftDecor"></div>
@@ -73,7 +92,14 @@ class ScoreScreen extends React.Component {
                     />
                     <div className="commentary">
                         <p>{commentInfo}</p>
-                        <p className="comments">{commentary}</p>
+                        <p className="comments">{this.comment()}</p>
+                    </div>
+                    <div className="commentary">
+                        <p>Summary</p>
+                        <p>Power was: {this.calculateDifference(strongScore)}</p>
+                        <p>Sweetness was: {this.calculateDifference(sweetScore)}</p>
+                        <p>Fanciness was: {this.calculateDifference(fancyScore)}</p>
+                        <p>Craziness was: {this.calculateDifference(crazyScore)}</p>
                     </div>
                     <NavigationLink
                         linkText = 'Back to menu'

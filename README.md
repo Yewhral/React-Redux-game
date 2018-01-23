@@ -11,10 +11,9 @@ Unit tests: Jest
 
 Todo next:
 1. Add better responsivity
-2. Add statistics that will be easier to read
-3. Add some kind of a preloader for images
+2. Add some kind of a preloader for images
 
 Todo a little later
-1. Refactor navigation and ingredient selection
+1. Refactor navigation and ingredient selection and ScoreScreen
 2. Consider either adding or removing propTypes
 3. Consider adding translations
