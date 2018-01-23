@@ -22,15 +22,11 @@ class ScoreScreen extends React.Component {
     componentWillMount() {
         const {strong, sweet, crazy, fancy, drinkPower, drinkSweet, drinkCrazy, drinkFancy} = this.props;
         this.setState({
-            strongScore: this.calculateStat(drinkPower, strong),
-            sweetScore: this.calculateStat(drinkSweet, sweet),
-            crazyScore: this.calculateStat(drinkCrazy, crazy),
-            fancyScore: this.calculateStat(drinkFancy, fancy),
+            strongScore: drinkPower - strong,
+            sweetScore: drinkSweet - sweet,
+            fancyScore: drinkFancy - fancy,
+            crazyScore: drinkCrazy - crazy,
         });
-    };
-
-    calculateStat = (score, goal) => {
-        return score - goal;
     };
 
     calculateComment = (parameter, scoreDifference) => {
@@ -44,7 +40,7 @@ class ScoreScreen extends React.Component {
             return param.insufficient;
         } else if (scoreDifference >= 2) {
             return param.excessive;
-        } else if (scoreDifference <= -2) {
+        } else {
             return param.deficient;
         }
     };
@@ -95,11 +91,11 @@ class ScoreScreen extends React.Component {
                         <p className="comments">{this.comment()}</p>
                     </div>
                     <div className="commentary">
-                        <p>Summary</p>
-                        <p>Power was: {this.calculateDifference(strongScore)}</p>
-                        <p>Sweetness was: {this.calculateDifference(sweetScore)}</p>
-                        <p>Fanciness was: {this.calculateDifference(fancyScore)}</p>
-                        <p>Craziness was: {this.calculateDifference(crazyScore)}</p>
+                        <p>Drink summary</p>
+                        <p>Power: {this.calculateDifference(strongScore)}</p>
+                        <p>Sweetness: {this.calculateDifference(sweetScore)}</p>
+                        <p>Craziness: {this.calculateDifference(crazyScore)}</p>
+                        <p>Fanciness: {this.calculateDifference(fancyScore)}</p>
                     </div>
                     <NavigationLink
                         linkText = 'Back to menu'
