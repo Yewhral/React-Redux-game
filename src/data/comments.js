@@ -55,7 +55,7 @@ const comments = {
             excessive : 'Oh man, that one was pure alcohol, ',
             redundant: 'I didn\'t ask for something that powerful, it was ',
             perfect: 'That was powerful, ',
-            insufficient: 'That was ',
+            insufficient: 'That was lacking power, it was ',
             deficient: 'I didn\'t feel any kick at all, it was '
         },
         sweet: {
